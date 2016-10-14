@@ -1,23 +1,22 @@
 $(document).ready(function() {
 
-	activeCallback.add(function() {
+	activeCallback.add(function() {});
 
-		$('.page input[type="radio"],' +
-		  '.page input[type="checkbox"],' +
-		  '.page select').styler();
+	$('.page input[type="radio"],' +
+		'.page input[type="checkbox"],' +
+		'.page select').styler();
 
-		$('.filter-languages').mCustomScrollbar({
-			scrollInertia: '0',
-			axis: 'x',
-			autoExpandScrollbar: true,
-			scrollButtons: {
-				enable: true
-			},
-			theme: '3d',
-			advanced: {
-				autoExpandHorizontalScroll: true
-			}
-		});
+	$('.filter-languages').mCustomScrollbar({
+		scrollInertia: '0',
+		axis: 'x',
+		autoExpandScrollbar: true,
+		scrollButtons: {
+			enable: true
+		},
+		theme: '3d',
+		advanced: {
+			autoExpandHorizontalScroll: true
+		}
 	});
 
 	$('.popup-open').fancybox({
