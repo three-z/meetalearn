@@ -1,0 +1,13 @@
+{
+  "name": "jquery.ztabs",
+  "homepage": "https://github.com/three-z/zTabs",
+  "_release": "9d997ec0cf",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9d997ec0cfe012df2cabade467082ab2892732e7"
+  },
+  "_source": "https://github.com/three-z/zTabs.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/three-z/zTabs.git"
+}

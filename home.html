@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
+		<link rel="stylesheet" href="bower_components/jquery.form-styler/jquery.formstyler.css" />
+		<link rel="stylesheet" href="bower_components/fancybox/source/jquery.fancybox.css" />
+		<link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
+		<link rel="stylesheet" href="bower_components/tooltipster/dist/css/tooltipster.bundle.min.css" />
+		<link rel="stylesheet" href="bower_components/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css" />
+		<link rel="stylesheet" href="bower_components/jquery-dropdown/jquery.dropdown.min.css" />
+		<link rel="stylesheet" href="css/app.css" />
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/webfontloader/webfontloader.js"></script>
+		<script>
+			var activeCallback = $.Callbacks();
+			WebFontConfig = {
+				google:
+				{
+					families: ["Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic:cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"]
+				},
+				active: function()
+				{
+					activeCallback.fire();
+				}
+			};
+			WebFont.load(WebFontConfig);
+		</script>
+	</head>
+
+	<body>
+		<div class="page">
+			<div class="header">
+				<div class="header-top">
+					<div class="header-top__layout container">
+						<div class="header-top__layout-left">
+							<div class="header-logo">
+								<a href="#"><img src="img/header/logo.png" width="120px" height="20px" /></a>
+							</div>
+						</div>
+						<div class="header-top__layout-right">
+							<div class="header-login">
+								<form class="header-login__form">
+									<div class="header-login__field"><input class="header-login__input" type="text" placeholder="Логин или почта" /></div>
+									<div class="header-login__field"><input class="header-login__input" type="password" placeholder="Пароль" /></div>
+									<div class="header-login__controls"><button class="header-login__button" type="submit">Войти</button></div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header-bottom">
+					<div class="header-bottom__layout container">
+						<div class="header-bottom__layout-right">
+							<div class="header-restore"><a href="#">Восстановить пароль</a></div>
+							<div class="header-social-login">
+								<div class="social-links">
+									<ul class="social-links__list">
+										<li class="social-links__list-item social-links__list-item_type_facebook"><a href="#">Facebook</a></li>
+										<li class="social-links__list-item social-links__list-item_type_odnoklassniki"><a href="#">Одноклассники</a></li>
+										<li class="social-links__list-item social-links__list-item_type_twitter"><a href="#">Twitter</a></li>
+										<li class="social-links__list-item social-links__list-item_type_vkontakte"><a href="#">ВКонтакте</a></li>
+										<li class="social-links__list-item social-links__list-item_type_linkedin"><a href="#">LinkedIn</a></li>
+										<li class="social-links__list-item social-links__list-item_type_youtube"><a href="#">YouTube</a></li>
+										<li class="social-links__list-item social-links__list-item_type_instagram"><a href="#">Instagram</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="home-welcome">
+					<div class="home-welcome__photos"></div>
+					<div class="home-welcome__layout container">
+						<div class="home-welcome__layout-left">
+							<div class="home-welcome__text">
+								<h1><span>About</span> the project</h1>
+								<p>Meetalearn is online social networking service to learn languages<br>with different people all over the world.</p>
+								<h3>Meet interesting people everywhere!<br>Learn different languages!<br>Find new friends!<br>Discover the world!</h3></div>
+						</div>
+						<div class="home-welcome__layout-right">
+							<div class="home-register">
+								<h3 class="home-register__title">Регистрация</h3>
+								<div class="home-register-form">
+									<form class="home-register-form__form">
+										<div class="home-register-form__row">
+											<div class="home-register-form__columns home-register-form__columns_type_2">
+												<div class="home-register-form__column"><label class="home-register-form__label" for="register-form-first-name">Имя</label>
+													<div class="home-register-form__field"><input class="home-register-form__input" type="text" id="register-form-first-name" name="register-form-first-name" /></div>
+												</div>
+												<div class="home-register-form__column"><label class="home-register-form__label" for="register-form-last-name">Фамилия</label>
+													<div class="home-register-form__field"><input class="home-register-form__input" type="text" id="register-form-last-name" name="register-form-last-name" /></div>
+												</div>
+											</div>
+										</div>
+										<div class="home-register-form__row"><label class="home-register-form__label" for="register-form-day-birth">Дата рождения</label>
+											<div class="home-register-form__columns home-register-form__columns_type_3">
+												<div class="home-register-form__column">
+													<div class="home-register-form__field"><input class="home-register-form__input" type="text" placeholder="день" id="register-form-day-birth" name="register-form-day-birth" /></div>
+												</div>
+												<div class="home-register-form__column">
+													<div class="home-register-form__field"><input class="home-register-form__input" type="text" placeholder="месяц" id="register-form-month-birth" name="register-form-month-birth" /></div>
+												</div>
+												<div class="home-register-form__column">
+													<div class="home-register-form__field"><input class="home-register-form__input" type="text" placeholder="год" id="register-form-year-birth" name="register-form-year-birth" /></div>
+												</div>
+											</div>
+										</div>
+										<div class="home-register-form__row"><label class="home-register-form__label" for="register-form-gender">Пол</label>
+											<div class="home-register-form__field"><label class="home-register-form__radio-label"><input class="home-register-form__radio" type="radio" name="register-form-gender" id="register-form-gender" value="male" checked=""/>Мужской</label><label class="home-register-form__radio-label"><input class="home-register-form__radio" type="radio" name="register-form-gender" value="female"/>Женский</label></div>
+										</div>
+										<div class="home-register-form__row">
+											<div class="home-register-form__columns home-register-form__columns_type_2">
+												<div class="home-register-form__column"><label class="home-register-form__label" for="register-form-login">Логин</label>
+													<div class="home-register-form__field"><input class="home-register-form__input" type="text" id="register-form-login" name="register-form-login" /></div>
+												</div>
+												<div class="home-register-form__column"><label class="home-register-form__label" for="register-form-email">Эл. почта</label>
+													<div class="home-register-form__field"><input class="home-register-form__input" type="text" id="register-form-email" name="register-form-email" /></div>
+												</div>
+											</div>
+										</div>
+										<div class="home-register-form__row">
+											<div class="home-register-form__columns home-register-form__columns_type_2">
+												<div class="home-register-form__column"><label class="home-register-form__label" for="register-form-password">Пароль</label>
+													<div class="home-register-form__field"><input class="home-register-form__input" type="password" id="register-form-password" name="register-form-password" /></div>
+												</div>
+												<div class="home-register-form__column"><label class="home-register-form__label" for="register-form-password-confirm">Подтвердите пароль</label>
+													<div class="home-register-form__field"><input class="home-register-form__input" type="text" id="register-form-password-confirm" name="register-form-password-confirm" /></div>
+												</div>
+											</div>
+										</div>
+										<div class="home-register-form__controls"><button class="home-register-form__button" type="submit">Зарегистрироваться</button></div>
+									</form>
+								</div>
+								<div class="home-register-social">
+									<div class="home-register-social__title">или войти с помощью соцсетей:</div>
+									<div class="home-register-social__list">
+										<div class="social-links">
+											<ul class="social-links__list">
+												<li class="social-links__list-item social-links__list-item_type_facebook"><a href="#">Facebook</a></li>
+												<li class="social-links__list-item social-links__list-item_type_odnoklassniki"><a href="#">Одноклассники</a></li>
+												<li class="social-links__list-item social-links__list-item_type_twitter"><a href="#">Twitter</a></li>
+												<li class="social-links__list-item social-links__list-item_type_vkontakte"><a href="#">ВКонтакте</a></li>
+												<li class="social-links__list-item social-links__list-item_type_linkedin"><a href="#">LinkedIn</a></li>
+												<li class="social-links__list-item social-links__list-item_type_youtube"><a href="#">YouTube</a></li>
+												<li class="social-links__list-item social-links__list-item_type_instagram"><a href="#">Instagram</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="home">
+					<div class="home__layout container">
+						<div class="home__layout-left">
+							<div class="home-online">
+								<h3 class="home-online__title">Сейчас в сети</h3>
+								<div class="home-online__show-all"><a href="#">Показать все</a></div>
+								<ul class="home-online-list">
+									<li class="home-online-list-item">
+										<div class="home-online-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/1.png" /></a>
+											</div>
+										</div>
+										<div class="home-online-list-item__avatar">
+											<div class="avatar avatar_size_big avatar_status_online">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="home-online-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+										<div class="home-online-list-item__status">Online</div>
+										<div class="home-online-list-item__profile"><a href="#">профиль</a></div>
+									</li>
+									<li class="home-online-list-item">
+										<div class="home-online-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/2.png" /></a>
+											</div>
+										</div>
+										<div class="home-online-list-item__avatar">
+											<div class="avatar avatar_size_big avatar_status_online">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="home-online-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+										<div class="home-online-list-item__status">Online</div>
+										<div class="home-online-list-item__profile"><a href="#">профиль</a></div>
+									</li>
+									<li class="home-online-list-item">
+										<div class="home-online-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/3.png" /></a>
+											</div>
+										</div>
+										<div class="home-online-list-item__avatar">
+											<div class="avatar avatar_size_big avatar_status_offline">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="home-online-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+										<div class="home-online-list-item__status">заходил 40 минут назад</div>
+										<div class="home-online-list-item__profile"><a href="#">профиль</a></div>
+									</li>
+									<li class="home-online-list-item">
+										<div class="home-online-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/1.png" /></a>
+											</div>
+										</div>
+										<div class="home-online-list-item__avatar">
+											<div class="avatar avatar_size_big avatar_status_online">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="home-online-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+										<div class="home-online-list-item__status">Online</div>
+										<div class="home-online-list-item__profile"><a href="#">профиль</a></div>
+									</li>
+									<li class="home-online-list-item">
+										<div class="home-online-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/2.png" /></a>
+											</div>
+										</div>
+										<div class="home-online-list-item__avatar">
+											<div class="avatar avatar_size_big avatar_status_online">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="home-online-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+										<div class="home-online-list-item__status">Online</div>
+										<div class="home-online-list-item__profile"><a href="#">профиль</a></div>
+									</li>
+									<li class="home-online-list-item">
+										<div class="home-online-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/3.png" /></a>
+											</div>
+										</div>
+										<div class="home-online-list-item__avatar">
+											<div class="avatar avatar_size_big avatar_status_offline">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="home-online-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+										<div class="home-online-list-item__status">заходил 40 минут назад</div>
+										<div class="home-online-list-item__profile"><a href="#">профиль</a></div>
+									</li>
+									<li class="home-online-list-item">
+										<div class="home-online-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/1.png" /></a>
+											</div>
+										</div>
+										<div class="home-online-list-item__avatar">
+											<div class="avatar avatar_size_big avatar_status_online">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="home-online-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+										<div class="home-online-list-item__status">Online</div>
+										<div class="home-online-list-item__profile"><a href="#">профиль</a></div>
+									</li>
+									<li class="home-online-list-item">
+										<div class="home-online-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/2.png" /></a>
+											</div>
+										</div>
+										<div class="home-online-list-item__avatar">
+											<div class="avatar avatar_size_big avatar_status_online">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="home-online-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+										<div class="home-online-list-item__status">Online</div>
+										<div class="home-online-list-item__profile"><a href="#">профиль</a></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="home__layout-right">
+							<div class="home-exchange">
+								<h3 class="home-exchange__title">Языковой обмен</h3>
+								<div class="home-exchange__show-all"><a href="#">Показать все</a></div>
+								<ul class="home-exchange-list">
+									<li class="home-exchange-list-item">
+										<div class="home-exchange-list-item__flag">
+											<a href="#"><img src="img/flags/big/1.png" /></a>
+										</div>
+										<div class="home-exchange-list-item__name"><a href="#">Австралия</a></div>
+									</li>
+									<li class="home-exchange-list-item">
+										<div class="home-exchange-list-item__flag">
+											<a href="#"><img src="img/flags/big/2.png" /></a>
+										</div>
+										<div class="home-exchange-list-item__name"><a href="#">Австрия</a></div>
+									</li>
+									<li class="home-exchange-list-item">
+										<div class="home-exchange-list-item__flag">
+											<a href="#"><img src="img/flags/big/3.png" /></a>
+										</div>
+										<div class="home-exchange-list-item__name"><a href="#">Азербайджан</a></div>
+									</li>
+									<li class="home-exchange-list-item">
+										<div class="home-exchange-list-item__flag">
+											<a href="#"><img src="img/flags/big/1.png" /></a>
+										</div>
+										<div class="home-exchange-list-item__name"><a href="#">Австралия</a></div>
+									</li>
+									<li class="home-exchange-list-item">
+										<div class="home-exchange-list-item__flag">
+											<a href="#"><img src="img/flags/big/2.png" /></a>
+										</div>
+										<div class="home-exchange-list-item__name"><a href="#">Австрия</a></div>
+									</li>
+									<li class="home-exchange-list-item">
+										<div class="home-exchange-list-item__flag">
+											<a href="#"><img src="img/flags/big/3.png" /></a>
+										</div>
+										<div class="home-exchange-list-item__name"><a href="#">Азербайджан</a></div>
+									</li>
+									<li class="home-exchange-list-item">
+										<div class="home-exchange-list-item__flag">
+											<a href="#"><img src="img/flags/big/1.png" /></a>
+										</div>
+										<div class="home-exchange-list-item__name"><a href="#">Австралия</a></div>
+									</li>
+									<li class="home-exchange-list-item">
+										<div class="home-exchange-list-item__flag">
+											<a href="#"><img src="img/flags/big/2.png" /></a>
+										</div>
+										<div class="home-exchange-list-item__name"><a href="#">Австрия</a></div>
+									</li>
+									<li class="home-exchange-list-item">
+										<div class="home-exchange-list-item__flag">
+											<a href="#"><img src="img/flags/big/3.png" /></a>
+										</div>
+										<div class="home-exchange-list-item__name"><a href="#">Азербайджан</a></div>
+									</li>
+									<li class="home-exchange-list-item">
+										<div class="home-exchange-list-item__flag">
+											<a href="#"><img src="img/flags/big/1.png" /></a>
+										</div>
+										<div class="home-exchange-list-item__name"><a href="#">Австралия</a></div>
+									</li>
+									<li class="home-exchange-list-item">
+										<div class="home-exchange-list-item__flag">
+											<a href="#"><img src="img/flags/big/2.png" /></a>
+										</div>
+										<div class="home-exchange-list-item__name"><a href="#">Австрия</a></div>
+									</li>
+									<li class="home-exchange-list-item">
+										<div class="home-exchange-list-item__flag">
+											<a href="#"><img src="img/flags/big/3.png" /></a>
+										</div>
+										<div class="home-exchange-list-item__name"><a href="#">Азербайджан</a></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footer__layout container">
+					<div class="footer__layout-left">
+						<div class="footer-navigation">
+							<ul class="footer-navigation__list">
+								<li class="footer-navigation__list-item"><a href="#">о сайте</a></li>
+								<li class="footer-navigation__list-item"><a href="#">помощь</a></li>
+								<li class="footer-navigation__list-item"><a href="#">правила</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__layout-middle">
+						<div class="footer-copyright">Copyright © 2016 <a href="#">Meetalearn</a>. All Rights reserved.</div>
+					</div>
+					<div class="footer__layout-right">
+						<div class="footer-develop">сайт разработан в <a href="#">Leeft</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="popups">
+				<div class="popup" id="photo">
+					<h3 class="popup__title">Основной альбом  (10 из 345)<a class="popup__close">Закрыть</a></h3>
+					<div class="popup__content">
+						<div class="photo">
+							<div class="photo__avatar">
+								<div class="avatar avatar_size_big">
+									<div class="avatar__image">
+										<a href="#"><img src="img/avatars/big/4.jpg" /></a>
+									</div>
+								</div>
+							</div>
+							<div class="photo__text">Гора Фицрой находится в территории национального парка Лос‑Гласьярес, на границе между<br>Аргентиной и Чили. Окрестности вершины опутаны множеством трекинговых троп, популярных среди туристов. Самый ближайший населенный пункт — Эль‑Чалтен, откуда
+								ходит автобус из Эль‑Калафате.<br>Самый ближайший населенный пункт — Эль‑Чалтен, откуда ходит автобус из Эль‑Калафате.</div>
+							<div class="photo-controls">
+								<ul class="photo-controls__list">
+									<li class="photo-controls__list-item"><a href="#">Удалить</a></li>
+									<li class="photo-controls__list-item"><a href="#">Перенести</a></li>
+									<li class="photo-controls__list-item"><a href="#">Поделиться</a></li>
+								</ul>
+							</div>
+							<div class="photo__show">
+								<div class="photo__image">
+									<a href="#"><img src="img/photos/big/3.jpg" /></a>
+								</div><a class="photo__previous">Предыдущее</a><a class="photo__next">Следующее</a></div>
+							<div class="photo__other">
+								<div class="photo__date"><a href="#">сегодня в 9:58</a></div>
+								<div class="photo__comment"><a href="#">Комментировать</a></div>
+								<div class="photo__like">
+									<div class="like"><a href="#">мне нравится</a></div>
+								</div>
+							</div>
+							<div class="photo__comments">
+								<div class="comments">
+									<div class="comments__show-all"><a href="#">Показать все 15 комментариев</a></div>
+									<ul class="comments-list">
+										<li class="comments-list-item">
+											<div class="comments-list-item__avatar">
+												<div class="avatar avatar_size_small avatar_status_offline">
+													<div class="avatar__image">
+														<a href="#"><img src="img/avatars/small/2.jpg" /></a>
+													</div>
+												</div>
+											</div>
+											<div class="comments-list-item__info">
+												<div class="comments-list-item__name"><a href="#">Оксана Макарова</a><span class="comments-list-item__reply-to"></span></div>
+												<div class="comments-list-item__lang">
+													<div class="comments-list-item__flag">
+														<div class="flag flag_size_small">
+															<a href="#"><img src="img/flags/small/2.png" /></a>
+														</div>
+													</div>
+													<div class="comments-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+												</div>
+												<div class="comments-list-item__text">Боже, какая красота! Гора Фицрой- прекраснейшая!! Спасибо за радость от просмотра фото).<br>АААААА!!!! Классс!!!! Невероятно красивая природа! Потрясающие места и виды!</div>
+												<div class="comments-list-item__other">
+													<div class="comments-list-item__date"><a href="#">25 минут назад</a></div>
+													<div class="comments-list-item__reply"><a href="#">Ответить</a></div>
+													<div class="comments-list-item__like">
+														<div class="like"><a href="#">мне нравится</a></div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="comments-list-item">
+											<div class="comments-list-item__avatar">
+												<div class="avatar avatar_size_small avatar_status_online">
+													<div class="avatar__image">
+														<a href="#"><img src="img/avatars/small/3.jpg" /></a>
+													</div>
+												</div>
+											</div>
+											<div class="comments-list-item__info">
+												<div class="comments-list-item__name"><a href="#">София Бандарчук</a><span class="comments-list-item__reply-to">ответила Оксане Макаровой</span></div>
+												<div class="comments-list-item__lang">
+													<div class="comments-list-item__flag">
+														<div class="flag flag_size_small">
+															<a href="#"><img src="img/flags/small/3.png" /></a>
+														</div>
+													</div>
+													<div class="comments-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+												</div>
+												<div class="comments-list-item__text">А я там была =P<br>По природе у меня возникли некоторые ассоциации с Новой Зеландией. Хотя и сложно сравнивать!</div>
+												<div class="comments-list-item__other">
+													<div class="comments-list-item__date"><a href="#">25 минут назад</a></div>
+													<div class="comments-list-item__reply"><a href="#">Ответить</a></div>
+													<div class="comments-list-item__like">
+														<div class="like like_active"><a href="#">мне нравится</a></div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<div class="comments-new-item">
+										<form class="comments-new-item__form"><textarea class="comments-new-item__textarea" placeholder="Комментировать..."></textarea>
+											<div class="comments-new-item__controls"><button class="comments-new-item__button" type="submit">Отправить</button></div>
+											<div class="comments-new-item__avatar">
+												<div class="avatar avatar_size_small">
+													<div class="avatar__image">
+														<a href="#"><img src="img/avatars/small/1.jpg" /></a>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup" id="video">
+					<h3 class="popup__title">Основной альбом  (10 из 345)<a class="popup__close">Закрыть</a></h3>
+					<div class="popup__content">
+						<div class="video">
+							<div class="video__avatar">
+								<div class="avatar avatar_size_big">
+									<div class="avatar__image">
+										<a href="#"><img src="img/avatars/big/4.jpg" /></a>
+									</div>
+								</div>
+							</div>
+							<div class="video__text">Гора Фицрой находится в территории национального парка Лос‑Гласьярес, на границе между<br>Аргентиной и Чили. Окрестности вершины опутаны множеством трекинговых троп, популярных среди туристов. Самый ближайший населенный пункт — Эль‑Чалтен, откуда
+								ходит автобус из Эль‑Калафате.<br>Самый ближайший населенный пункт — Эль‑Чалтен, откуда ходит автобус из Эль‑Калафате.</div>
+							<div class="video-controls">
+								<ul class="video-controls__list">
+									<li class="video-controls__list-item"><a href="#">Удалить</a></li>
+									<li class="video-controls__list-item"><a href="#">Перенести</a></li>
+									<li class="video-controls__list-item"><a href="#">Поделиться</a></li>
+								</ul>
+							</div>
+							<div class="video__show">
+								<div class="video__image">
+									<a href="#"><img src="img/photos/big/3.jpg" /></a>
+								</div><a class="video__previous">Предыдущее</a><a class="video__next">Следующее</a></div>
+							<div class="video__other">
+								<div class="video__date"><a href="#">сегодня в 9:58</a></div>
+								<div class="video__comment"><a href="#">Комментировать</a></div>
+								<div class="video__like">
+									<div class="like"><a href="#">мне нравится</a></div>
+								</div>
+							</div>
+							<div class="video__comments">
+								<div class="comments">
+									<div class="comments__show-all"><a href="#">Показать все 15 комментариев</a></div>
+									<ul class="comments-list">
+										<li class="comments-list-item">
+											<div class="comments-list-item__avatar">
+												<div class="avatar avatar_size_small avatar_status_offline">
+													<div class="avatar__image">
+														<a href="#"><img src="img/avatars/small/2.jpg" /></a>
+													</div>
+												</div>
+											</div>
+											<div class="comments-list-item__info">
+												<div class="comments-list-item__name"><a href="#">Оксана Макарова</a><span class="comments-list-item__reply-to"></span></div>
+												<div class="comments-list-item__lang">
+													<div class="comments-list-item__flag">
+														<div class="flag flag_size_small">
+															<a href="#"><img src="img/flags/small/2.png" /></a>
+														</div>
+													</div>
+													<div class="comments-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+												</div>
+												<div class="comments-list-item__text">Боже, какая красота! Гора Фицрой- прекраснейшая!! Спасибо за радость от просмотра фото).<br>АААААА!!!! Классс!!!! Невероятно красивая природа! Потрясающие места и виды!</div>
+												<div class="comments-list-item__other">
+													<div class="comments-list-item__date"><a href="#">25 минут назад</a></div>
+													<div class="comments-list-item__reply"><a href="#">Ответить</a></div>
+													<div class="comments-list-item__like">
+														<div class="like"><a href="#">мне нравится</a></div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="comments-list-item">
+											<div class="comments-list-item__avatar">
+												<div class="avatar avatar_size_small avatar_status_online">
+													<div class="avatar__image">
+														<a href="#"><img src="img/avatars/small/3.jpg" /></a>
+													</div>
+												</div>
+											</div>
+											<div class="comments-list-item__info">
+												<div class="comments-list-item__name"><a href="#">София Бандарчук</a><span class="comments-list-item__reply-to">ответила Оксане Макаровой</span></div>
+												<div class="comments-list-item__lang">
+													<div class="comments-list-item__flag">
+														<div class="flag flag_size_small">
+															<a href="#"><img src="img/flags/small/3.png" /></a>
+														</div>
+													</div>
+													<div class="comments-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+												</div>
+												<div class="comments-list-item__text">А я там была =P<br>По природе у меня возникли некоторые ассоциации с Новой Зеландией. Хотя и сложно сравнивать!</div>
+												<div class="comments-list-item__other">
+													<div class="comments-list-item__date"><a href="#">25 минут назад</a></div>
+													<div class="comments-list-item__reply"><a href="#">Ответить</a></div>
+													<div class="comments-list-item__like">
+														<div class="like like_active"><a href="#">мне нравится</a></div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<div class="comments-new-item">
+										<form class="comments-new-item__form"><textarea class="comments-new-item__textarea" placeholder="Комментировать..."></textarea>
+											<div class="comments-new-item__controls"><button class="comments-new-item__button" type="submit">Отправить</button></div>
+											<div class="comments-new-item__avatar">
+												<div class="avatar avatar_size_small">
+													<div class="avatar__image">
+														<a href="#"><img src="img/avatars/small/1.jpg" /></a>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
+		<script src="bower_components/jquery.form-styler/jquery.formstyler.min.js"></script>
+		<script src="bower_components/jquery.ztabs/jquery.ztabs.js"></script>
+		<script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+		<script src="bower_components/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+		<script src="bower_components/jquery-dropdown/jquery.dropdown.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+
+</html>

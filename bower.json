@@ -1,0 +1,19 @@
+{
+	"name": "project",
+	"version": "1.0.0",
+	"moduleType": [
+		"globals"
+	],
+	"license": "MIT",
+	"dependencies": {
+		"jquery": "2.*",
+		"normalize.css": "*",
+		"webfontloader": "*",
+		"fancybox": "*",
+		"jquery.form-styler": "*",
+		"jquery.ztabs": "https://github.com/three-z/zTabs.git",
+		"malihu-custom-scrollbar-plugin": "*",
+		"tooltipster": "*",
+		"jquery-dropdown": "*"
+	}
+}

@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
+		<link rel="stylesheet" href="bower_components/jquery.form-styler/jquery.formstyler.css" />
+		<link rel="stylesheet" href="bower_components/fancybox/source/jquery.fancybox.css" />
+		<link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
+		<link rel="stylesheet" href="bower_components/tooltipster/dist/css/tooltipster.bundle.min.css" />
+		<link rel="stylesheet" href="bower_components/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css" />
+		<link rel="stylesheet" href="bower_components/jquery-dropdown/jquery.dropdown.min.css" />
+		<link rel="stylesheet" href="css/app.css" />
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/webfontloader/webfontloader.js"></script>
+		<script>
+			var activeCallback = $.Callbacks();
+			WebFontConfig = {
+				google:
+				{
+					families: ["Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic:cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"]
+				},
+				active: function()
+				{
+					activeCallback.fire();
+				}
+			};
+			WebFont.load(WebFontConfig);
+		</script>
+	</head>
+
+	<body>
+		<div class="page">
+			<div class="header">
+				<div class="header-top">
+					<div class="header-top__layout container">
+						<div class="header-top__layout-left">
+							<div class="header-logo">
+								<a href="#"><img src="img/header/logo.png" width="120px" height="20px" /></a>
+							</div>
+						</div>
+						<div class="header-top__layout-right">
+							<div class="header-search">
+								<form class="header-search__form">
+									<div class="header-search__field"><input class="header-search__input" type="text" placeholder="Поиск" /></div>
+									<div class="header-search__controls"><button class="header-search__button" type="submit">Найти</button></div>
+								</form>
+							</div>
+							<div class="header-profile"><a href="#"><span class="header-profile__avatar"><img src="img/avatars/mini/1.jpg"/></span><span class="header-profile__name">Григорий<br>Суворов</span></a></div>
+							<div class="header-settings">
+								<div class="header-settings__button"><a href="#" data-jq-dropdown="#jq-dropdown-1">Настройки</a></div>
+								<div class="jq-dropdown" id="jq-dropdown-1">
+									<ul class="jq-dropdown-menu">
+										<li><a href="#">Настройки</a></li>
+										<li><a href="#">Помощь</a></li>
+										<li class="jq-dropdown-divider"></li>
+										<li><a href="#">Выход</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="header-exit"><a href="#">Выйти</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="header-bottom">
+					<div class="header-bottom__layout container">
+						<div class="header-bottom__layout-left">
+							<div class="header-navigation">
+								<ul class="header-navigation__list">
+									<li class="header-navigation__list-item header-navigation__list-item_active"><a href="#">Главная</a></li>
+									<li class="header-navigation__list-item"><a href="#">Языковой обмен</a></li>
+									<li class="header-navigation__list-item"><a href="#">Профиль</a></li>
+									<li class="header-navigation__list-item"><a href="#">Мои новости</a></li>
+									<li class="header-navigation__list-item"><a href="#">Группы</a></li>
+									<li class="header-navigation__list-item"><a href="#">Друзья</a></li>
+									<li class="header-navigation__list-item"><a href="#">Сообщения</a></li>
+									<li class="header-navigation__list-item"><a href="#">Фотографии</a></li>
+									<li class="header-navigation__list-item"><a href="#">Видео</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="profile">
+					<div class="profile__layout container">
+						<div class="profile__layout-left">
+							<div class="profile-avatar">
+								<div class="profile-avatar__image">
+									<a href="#"><img src="img/avatars/full/1.jpg" /></a>
+								</div>
+								<div class="profile-avatar-controls">
+									<ul class="profile-avatar-controls__list">
+										<li class="profile-avatar-controls__list-item profile-avatar-controls__list-item_type_change-thumb tooltip" title="Изменить миниатюру"><a href="#">Изменить миниатюру</a></li>
+										<li class="profile-avatar-controls__list-item profile-avatar-controls__list-item_type_change-avatar tooltip" title="Изменить фотографию"><a href="#">Изменить фотографию</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="profile-controls">
+								<ul class="profile-controls__list">
+									<li class="profile-controls__list-item"><a href="#">Редактировать страницу</a></li>
+								</ul>
+							</div>
+							<div class="profile-photos">
+								<h3 class="profile-photos__title"><a href="#">Мои фотографии</a><span class="profile-photos__count">(105)</span></h3>
+								<div class="profile-photos__show-all"><a href="#">Все</a></div>
+								<ul class="profile-photos-list">
+									<li class="profile-photos-list-item">
+										<a href="#"><img src="img/photos/mini/1.jpg" /></a>
+									</li>
+									<li class="profile-photos-list-item">
+										<a href="#"><img src="img/photos/mini/2.jpg" /></a>
+									</li>
+									<li class="profile-photos-list-item">
+										<a href="#"><img src="img/photos/mini/3.jpg" /></a>
+									</li>
+								</ul>
+							</div>
+							<div class="profile-friends">
+								<h3 class="profile-friends__title"><a href="#">Друзья</a><span class="profile-friends__count">(775)</span></h3>
+								<div class="profile-friends-tabs">
+									<div class="profile-friends-tabs-switchers">
+										<ul class="profile-friends-tabs-switchers__list">
+											<li class="profile-friends-tabs-switchers__list-item profile-friends-tabs-switchers__list-item_type_friends profile-friends-tabs-switchers__list-item_active"><a href="#">Друзья</a></li>
+											<li class="profile-friends-tabs-switchers__list-item profile-friends-tabs-switchers__list-item_type_potential-friends"><a href="#">Возможные друзья</a></li>
+										</ul>
+									</div>
+									<div class="profile-friends-tabs-content profile-friends-tabs-content_active">
+										<ul class="profile-friends-list">
+											<li class="profile-friends-list-item">
+												<div class="profile-friends-list-item__avatar">
+													<div class="avatar avatar_size_medium avatar_status_online">
+														<div class="avatar__image">
+															<a href="#"><img src="img/avatars/medium/1.jpg" /></a>
+														</div>
+													</div>
+												</div>
+												<div class="profile-friends-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+											</li>
+											<li class="profile-friends-list-item">
+												<div class="profile-friends-list-item__avatar">
+													<div class="avatar avatar_size_medium avatar_status_online">
+														<div class="avatar__image">
+															<a href="#"><img src="img/avatars/medium/2.jpg" /></a>
+														</div>
+													</div>
+												</div>
+												<div class="profile-friends-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+											</li>
+											<li class="profile-friends-list-item">
+												<div class="profile-friends-list-item__avatar">
+													<div class="avatar avatar_size_medium avatar_status_offline">
+														<div class="avatar__image">
+															<a href="#"><img src="img/avatars/medium/3.jpg" /></a>
+														</div>
+													</div>
+												</div>
+												<div class="profile-friends-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+											</li>
+											<li class="profile-friends-list-item">
+												<div class="profile-friends-list-item__avatar">
+													<div class="avatar avatar_size_medium avatar_status_online">
+														<div class="avatar__image">
+															<a href="#"><img src="img/avatars/medium/2.jpg" /></a>
+														</div>
+													</div>
+												</div>
+												<div class="profile-friends-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+											</li>
+											<li class="profile-friends-list-item">
+												<div class="profile-friends-list-item__avatar">
+													<div class="avatar avatar_size_medium avatar_status_offline">
+														<div class="avatar__image">
+															<a href="#"><img src="img/avatars/medium/3.jpg" /></a>
+														</div>
+													</div>
+												</div>
+												<div class="profile-friends-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+											</li>
+											<li class="profile-friends-list-item">
+												<div class="profile-friends-list-item__avatar">
+													<div class="avatar avatar_size_medium avatar_status_online">
+														<div class="avatar__image">
+															<a href="#"><img src="img/avatars/medium/1.jpg" /></a>
+														</div>
+													</div>
+												</div>
+												<div class="profile-friends-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+											</li>
+										</ul>
+										<div class="profile-friends-more"><a href="#">Показать больше</a></div>
+									</div>
+									<div class="profile-friends-tabs-content">
+										<ul class="profile-friends-list">
+											<li class="profile-friends-list-item">
+												<div class="profile-friends-list-item__avatar">
+													<div class="avatar avatar_size_medium avatar_status_online">
+														<div class="avatar__image">
+															<a href="#"><img src="img/avatars/medium/2.jpg" /></a>
+														</div>
+													</div>
+												</div>
+												<div class="profile-friends-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+											</li>
+											<li class="profile-friends-list-item">
+												<div class="profile-friends-list-item__avatar">
+													<div class="avatar avatar_size_medium avatar_status_offline">
+														<div class="avatar__image">
+															<a href="#"><img src="img/avatars/medium/3.jpg" /></a>
+														</div>
+													</div>
+												</div>
+												<div class="profile-friends-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+											</li>
+											<li class="profile-friends-list-item">
+												<div class="profile-friends-list-item__avatar">
+													<div class="avatar avatar_size_medium avatar_status_online">
+														<div class="avatar__image">
+															<a href="#"><img src="img/avatars/medium/1.jpg" /></a>
+														</div>
+													</div>
+												</div>
+												<div class="profile-friends-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+											</li>
+											<li class="profile-friends-list-item">
+												<div class="profile-friends-list-item__avatar">
+													<div class="avatar avatar_size_medium avatar_status_offline">
+														<div class="avatar__image">
+															<a href="#"><img src="img/avatars/medium/3.jpg" /></a>
+														</div>
+													</div>
+												</div>
+												<div class="profile-friends-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+											</li>
+											<li class="profile-friends-list-item">
+												<div class="profile-friends-list-item__avatar">
+													<div class="avatar avatar_size_medium avatar_status_online">
+														<div class="avatar__image">
+															<a href="#"><img src="img/avatars/medium/2.jpg" /></a>
+														</div>
+													</div>
+												</div>
+												<div class="profile-friends-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+											</li>
+											<li class="profile-friends-list-item">
+												<div class="profile-friends-list-item__avatar">
+													<div class="avatar avatar_size_medium avatar_status_online">
+														<div class="avatar__image">
+															<a href="#"><img src="img/avatars/medium/1.jpg" /></a>
+														</div>
+													</div>
+												</div>
+												<div class="profile-friends-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+											</li>
+										</ul>
+										<div class="profile-friends-more"><a href="#">Показать больше</a></div>
+									</div>
+								</div>
+							</div>
+							<div class="profile-photo-albums">
+								<h3 class="profile-photo-albums__title"><a href="#">Фотоальбомы</a><span class="profile-photo-albums__count">(7)</span></h3>
+								<div class="profile-photo-albums__show-all"><a href="#">Все</a></div>
+								<ul class="profile-photo-albums-list">
+									<li class="profile-photo-albums-list-item">
+										<a href="#"><img src="img/photos/small/1.jpg" /></a>
+									</li>
+									<li class="profile-photo-albums-list-item">
+										<a href="#"><img src="img/photos/small/2.jpg" /></a>
+									</li>
+									<li class="profile-photo-albums-list-item">
+										<a href="#"><img src="img/photos/small/3.jpg" /></a>
+									</li>
+									<li class="profile-photo-albums-list-item">
+										<a href="#"><img src="img/photos/small/4.jpg" /></a>
+									</li>
+								</ul>
+							</div>
+							<div class="profile-video-albums">
+								<h3 class="profile-video-albums__title"><a href="#">Видеоальбомы</a><span class="profile-video-albums__count">(23)</span></h3>
+								<div class="profile-video-albums__show-all"><a href="#">Все</a></div>
+								<ul class="profile-video-albums-list">
+									<li class="profile-video-albums-list-item">
+										<a href="#"><img src="img/photos/small/5.jpg" /></a>
+									</li>
+									<li class="profile-video-albums-list-item">
+										<a href="#"><img src="img/photos/small/6.jpg" /></a>
+									</li>
+									<li class="profile-video-albums-list-item">
+										<a href="#"><img src="img/photos/small/7.jpg" /></a>
+									</li>
+									<li class="profile-video-albums-list-item">
+										<a href="#"><img src="img/photos/small/8.jpg" /></a>
+									</li>
+								</ul>
+							</div>
+							<div class="profile-groups">
+								<h3 class="profile-groups__title"><a href="#">Группы</a><span class="profile-groups__count">(155)</span></h3>
+								<div class="profile-groups__show-all"><a href="#">Все</a></div>
+								<ul class="profile-groups-list">
+									<li class="profile-groups-list-item">
+										<div class="profile-groups-list-item__avatar">
+											<div class="avatar avatar_size_small avatar_border_none">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/small/4.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="profile-groups-list-item__info">
+											<div class="profile-groups-list-item__name"><a href="#">Наука и Техника</a></div>
+											<div class="profile-groups-list-item__description">Публичная страница</div>
+											<div class="profile-groups-list-item__count">1 148 763 подписчика</div>
+										</div>
+									</li>
+									<li class="profile-groups-list-item">
+										<div class="profile-groups-list-item__avatar">
+											<div class="avatar avatar_size_small avatar_border_none">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/small/5.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="profile-groups-list-item__info">
+											<div class="profile-groups-list-item__name"><a href="#">Ябпорулил</a></div>
+											<div class="profile-groups-list-item__description">Ценители хороших Машин</div>
+											<div class="profile-groups-list-item__count">1 201 898 подписчиков</div>
+										</div>
+									</li>
+									<li class="profile-groups-list-item">
+										<div class="profile-groups-list-item__avatar">
+											<div class="avatar avatar_size_small avatar_border_none">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/small/6.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="profile-groups-list-item__info">
+											<div class="profile-groups-list-item__name"><a href="#">Физика</a></div>
+											<div class="profile-groups-list-item__description">Планета физика</div>
+											<div class="profile-groups-list-item__count">98 955 подписчиков</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="profile__layout-right">
+							<div class="profile-info">
+								<h1 class="profile-info__name">Григорий Суворов</h1>
+								<div class="profile-info__status">Online</div>
+								<div class="profile-info__decription">Per aspera ad astra</div>
+								<div class="profile-info__block">
+									<dl><dt>День рождения:</dt>
+										<dd>1 августа</dd><dt>Родной город:</dt>
+										<dd>Rio de Janeiro</dd><dt>Родной язык:</dt>
+										<dd><a href="#">Португальский</a></dd><dt>Владею языками:</dt>
+										<dd><a href="#">Английский</a>&nbsp;<span class="rating rating_rating_10"></span> ; <a href="#">Итальянский</a>&nbsp;<span class="rating rating_rating_8"></span> ; <a href="#">Испанский</a>&nbsp;<span class="rating rating_rating_5"></span> ;
+											<a
+												href="#">Китайский</a>&nbsp;<span class="rating rating_rating_9"></span>.</dd><dt>Хочу изучить:</dt>
+										<dd><a href="#">Хинди</a>, <a href="#">Японский</a>, <a href="#">Иврит</a>.</dd>
+									</dl>
+								</div>
+								<div class="profile-info__block">
+									<h3>Личная информация:</h3>
+									<dl><dt>Цель регистрации:</dt>
+										<dd>Переписка</dd><dt>О себе:</dt>
+										<dd>Зная несколько славянских языков - довольно хорошо понимаю и другие славянские. Зная эсперанто - более-менее понимаю несложные фразы на романских языках и могу общатьсяс их носителями.</dd><dt>С кем я хочу общаться:</dt>
+										<dd>Зная несколько славянских языков - довольно хорошо понимаю и другие славянские. Зная эсперанто - более-менее понимаю несложные фразы на романских языках и могу общатьсяс их носителями.</dd><dt>Интересы и хобби:</dt>
+										<dd>Активный отдых, музыка, IT</dd><dt>Музыка:</dt>
+										<dd>Hans Zimmer</dd><dt>Книги:</dt>
+										<dd>Ужасы, фантастика, научные</dd><dt>Фильмы:</dt>
+										<dd>Отступники, Silent Hill, Престиж, Назад в будущее</dd><dt>ТВ шоу:</dt>
+										<dd>Адская кухня</dd><dt>Любимые цитаты:</dt>
+										<dd>А toutprix (фр.) - Любой ценой.<br>Audacesfortuna kuvatrr - Счастье сопутствует смелым.</dd><dt>Я в других соц.сетях:</dt>
+										<dd>
+											<div class="social-links">
+												<ul class="social-links__list">
+													<li class="social-links__list-item social-links__list-item_type_facebook"><a href="#">Facebook</a></li>
+													<li class="social-links__list-item social-links__list-item_type_odnoklassniki"><a href="#">Одноклассники</a></li>
+													<li class="social-links__list-item social-links__list-item_type_twitter"><a href="#">Twitter</a></li>
+													<li class="social-links__list-item social-links__list-item_type_vkontakte"><a href="#">ВКонтакте</a></li>
+													<li class="social-links__list-item social-links__list-item_type_linkedin"><a href="#">LinkedIn</a></li>
+													<li class="social-links__list-item social-links__list-item_type_youtube"><a href="#">YouTube</a></li>
+													<li class="social-links__list-item social-links__list-item_type_instagram"><a href="#">Instagram</a></li>
+												</ul>
+											</div>
+										</dd><dt>Моё местоположение:</dt>
+										<dd>
+											<div class="profile-location">
+												<div class="profile-location__map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1715.6363795188784!2d40.558843915925024!3d64.53220919049191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4418343024fd4fab%3A0xe95fe87aae8b8ebf!2z0YPQuy4g0KPRgNC40YbQutC-0LPQviwgMTcsINCQ0YDRhdCw0L3Qs9C10LvRjNGB0LosINCQ0YDRhdCw0L3Qs9C10LvRjNGB0LrQsNGPINC-0LHQuy4sIDE2MzAwMg!5e0!3m2!1sru!2sru!4v1474192669126"
+														width="596" height="348" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+												<div class="profile-location__actions">
+													<div class="profile-location-search">
+														<div class="profile-location-search__form">
+															<div class="profile-location-search__field"><input class="profile-location-search__input" type="text" placeholder="Поиск по названию города или улицы" /></div>
+															<div class="profile-location-search__controls"><button class="profile-location-search__button" type="submit">Найти</button></div>
+														</div>
+													</div>
+													<div class="profile-location-controls">
+														<ul class="profile-location-controls__list">
+															<li class="profile-location-controls__list-item profile-location-controls__list-item_type_save"><a href="#">Сохранить</a></li>
+															<li class="profile-location-controls__list-item profile-location-controls__list-item_type_delete tooltip" title="Удалить"><a href="#">Удалить</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</dd>
+									</dl>
+								</div>
+								<div class="profile-info__hide"><a href="#">Скрыть подробную информацию</a></div>
+							</div>
+							<div class="profile-wall-new-item">
+								<form class="profile-wall-new-item__form">
+									<div class="profile-wall-new-item__field"><textarea class="profile-wall-new-item__textarea" placeholder="Новая запись"></textarea></div>
+									<div class="profile-wall-new-item__controls"><button class="profile-wall-new-item__button" type="submit">Отправить</button>
+										<div class="profile-wall-new-item-attach">
+											<ul class="profile-wall-new-item-attach__list">
+												<li class="profile-wall-new-item-attach__list-item profile-wall-new-item-attach__list-item_type_video tooltip" title="Прикрепить видео"><a href="#">Прикрепить видео</a></li>
+												<li class="profile-wall-new-item-attach__list-item profile-wall-new-item-attach__list-item_type_photo tooltip" title="Прикрепить фото"><a href="#">Прикрепить фото</a></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="profile-wall">
+								<div class="profile-wall__count">2 записи</div>
+								<div class="profile-wall__list">
+									<div class="wall">
+										<ul class="wall-list">
+											<li class="wall-list-item">
+												<div class="wall-list-item__avatar">
+													<div class="avatar avatar_size_big avatar_status_online">
+														<div class="avatar__image">
+															<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+														</div>
+													</div>
+												</div>
+												<div class="wall-list-item__info">
+													<div class="wall-list-item__name"><a href="#">Григорий Суворов</a></div>
+													<div class="wall-list-item__lang">
+														<div class="wall-list-item__flag">
+															<div class="flag flag_size_small">
+																<a href="#"><img src="img/flags/small/1.png" /></a>
+															</div>
+														</div>
+														<div class="wall-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+													</div>
+													<div class="wall-list-item__text">Национальный парк Лос-Гласьярес, Аргентина.<br><br>Национальный парк, расположенный в Патагонии, на территории аргентинской провинции Санта-Крус.<br>Своим названием парк обязан огромной ледяной шапке в Андах, которая питает 47 больших ледников,
+														из которых только 13 стекают в сторону Атлантического океана. Этот ледяной массив является крупнейшим после льдов Антарктиды и Гренландии.</div>
+													<div class="wall-list-item__images">
+														<a href="#"><img src="img/photos/big/1.jpg" /></a>
+													</div>
+													<div class="wall-list-item__other">
+														<div class="wall-list-item__date"><a href="#">сегодня в 9:58</a></div>
+														<div class="wall-list-item__comment"><a href="#">Комментировать</a></div>
+														<div class="wall-list-item__like">
+															<div class="like"><a href="#">мне нравится</a></div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="wall-list-item">
+												<div class="wall-list-item__avatar">
+													<div class="avatar avatar_size_big avatar_status_online">
+														<div class="avatar__image">
+															<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+														</div>
+													</div>
+												</div>
+												<div class="wall-list-item__info">
+													<div class="wall-list-item__name"><a href="#">Григорий Суворов</a></div>
+													<div class="wall-list-item__lang">
+														<div class="wall-list-item__flag">
+															<div class="flag flag_size_small">
+																<a href="#"><img src="img/flags/small/1.png" /></a>
+															</div>
+														</div>
+														<div class="wall-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+													</div>
+													<div class="wall-list-item__text">Гора Фицрой находится в территории национального парка Лос‑Гласьярес, на границе между<br>Аргентиной и Чили. Окрестности вершины опутаны множеством трекинговых троп, популярных среди туристов. Самый ближайший населенный пункт — Эль‑Чалтен,
+														откуда ходит автобус из Эль‑Калафате.<br>Самый ближайший населенный пункт — Эль‑Чалтен, откуда ходит автобус из Эль‑Калафате.</div>
+													<div class="wall-list-item__images">
+														<a href="#"><img src="img/photos/big/2.jpg" /></a>
+													</div>
+													<div class="wall-list-item__other">
+														<div class="wall-list-item__date"><a href="#">сегодня в 9:58</a></div>
+														<div class="wall-list-item__like">
+															<div class="like"><a href="#">мне нравится</a></div>
+														</div>
+													</div>
+													<div class="wall-list-item__comments">
+														<div class="comments">
+															<div class="comments__show-all"><a href="#">Показать все 15 комментариев</a></div>
+															<ul class="comments-list">
+																<li class="comments-list-item">
+																	<div class="comments-list-item__avatar">
+																		<div class="avatar avatar_size_small avatar_status_offline">
+																			<div class="avatar__image">
+																				<a href="#"><img src="img/avatars/small/2.jpg" /></a>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="comments-list-item__info">
+																		<div class="comments-list-item__name"><a href="#">Оксана Макарова</a><span class="comments-list-item__reply-to"></span></div>
+																		<div class="comments-list-item__lang">
+																			<div class="comments-list-item__flag">
+																				<div class="flag flag_size_small">
+																					<a href="#"><img src="img/flags/small/2.png" /></a>
+																				</div>
+																			</div>
+																			<div class="comments-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+																		</div>
+																		<div class="comments-list-item__text">Боже, какая красота! Гора Фицрой- прекраснейшая!! Спасибо за радость от просмотра фото).<br>АААААА!!!! Классс!!!! Невероятно красивая природа! Потрясающие места и виды!</div>
+																		<div class="comments-list-item__other">
+																			<div class="comments-list-item__date"><a href="#">25 минут назад</a></div>
+																			<div class="comments-list-item__reply"><a href="#">Ответить</a></div>
+																			<div class="comments-list-item__like">
+																				<div class="like"><a href="#">мне нравится</a></div>
+																			</div>
+																		</div>
+																	</div>
+																</li>
+																<li class="comments-list-item">
+																	<div class="comments-list-item__avatar">
+																		<div class="avatar avatar_size_small avatar_status_online">
+																			<div class="avatar__image">
+																				<a href="#"><img src="img/avatars/small/3.jpg" /></a>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="comments-list-item__info">
+																		<div class="comments-list-item__name"><a href="#">София Бандарчук</a><span class="comments-list-item__reply-to">ответила Оксане Макаровой</span></div>
+																		<div class="comments-list-item__lang">
+																			<div class="comments-list-item__flag">
+																				<div class="flag flag_size_small">
+																					<a href="#"><img src="img/flags/small/3.png" /></a>
+																				</div>
+																			</div>
+																			<div class="comments-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+																		</div>
+																		<div class="comments-list-item__text">А я там была =P<br>По природе у меня возникли некоторые ассоциации с Новой Зеландией. Хотя и сложно сравнивать!</div>
+																		<div class="comments-list-item__other">
+																			<div class="comments-list-item__date"><a href="#">25 минут назад</a></div>
+																			<div class="comments-list-item__reply"><a href="#">Ответить</a></div>
+																			<div class="comments-list-item__like">
+																				<div class="like like_active"><a href="#">мне нравится</a></div>
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+															<div class="comments-new-item">
+																<form class="comments-new-item__form"><textarea class="comments-new-item__textarea" placeholder="Комментировать..."></textarea>
+																	<div class="comments-new-item__controls"><button class="comments-new-item__button" type="submit">Отправить</button></div>
+																	<div class="comments-new-item__avatar">
+																		<div class="avatar avatar_size_small">
+																			<div class="avatar__image">
+																				<a href="#"><img src="img/avatars/small/1.jpg" /></a>
+																			</div>
+																		</div>
+																	</div>
+																</form>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="wall-list-item-controls">
+													<ul class="wall-list-item-controls__list">
+														<li class="wall-list-item-controls__list-item wall-list-item-controls__list-item_type_edit tooltip" title="Редактировать"><a href="#">Редактировать</a></li>
+														<li class="wall-list-item-controls__list-item wall-list-item-controls__list-item_type_delete tooltip" title="Удалить"><a href="#">Удалить</a></li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footer__layout container">
+					<div class="footer__layout-left">
+						<div class="footer-navigation">
+							<ul class="footer-navigation__list">
+								<li class="footer-navigation__list-item"><a href="#">о сайте</a></li>
+								<li class="footer-navigation__list-item"><a href="#">помощь</a></li>
+								<li class="footer-navigation__list-item"><a href="#">правила</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__layout-middle">
+						<div class="footer-copyright">Copyright © 2016 <a href="#">Meetalearn</a>. All Rights reserved.</div>
+					</div>
+					<div class="footer__layout-right">
+						<div class="footer-develop">сайт разработан в <a href="#">Leeft</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="popups">
+				<div class="popup" id="photo">
+					<h3 class="popup__title">Основной альбом  (10 из 345)<a class="popup__close">Закрыть</a></h3>
+					<div class="popup__content">
+						<div class="photo">
+							<div class="photo__avatar">
+								<div class="avatar avatar_size_big">
+									<div class="avatar__image">
+										<a href="#"><img src="img/avatars/big/4.jpg" /></a>
+									</div>
+								</div>
+							</div>
+							<div class="photo__text">Гора Фицрой находится в территории национального парка Лос‑Гласьярес, на границе между<br>Аргентиной и Чили. Окрестности вершины опутаны множеством трекинговых троп, популярных среди туристов. Самый ближайший населенный пункт — Эль‑Чалтен, откуда
+								ходит автобус из Эль‑Калафате.<br>Самый ближайший населенный пункт — Эль‑Чалтен, откуда ходит автобус из Эль‑Калафате.</div>
+							<div class="photo-controls">
+								<ul class="photo-controls__list">
+									<li class="photo-controls__list-item"><a href="#">Удалить</a></li>
+									<li class="photo-controls__list-item"><a href="#">Перенести</a></li>
+									<li class="photo-controls__list-item"><a href="#">Поделиться</a></li>
+								</ul>
+							</div>
+							<div class="photo__show">
+								<div class="photo__image">
+									<a href="#"><img src="img/photos/big/3.jpg" /></a>
+								</div><a class="photo__previous">Предыдущее</a><a class="photo__next">Следующее</a></div>
+							<div class="photo__other">
+								<div class="photo__date"><a href="#">сегодня в 9:58</a></div>
+								<div class="photo__comment"><a href="#">Комментировать</a></div>
+								<div class="photo__like">
+									<div class="like"><a href="#">мне нравится</a></div>
+								</div>
+							</div>
+							<div class="photo__comments">
+								<div class="comments">
+									<div class="comments__show-all"><a href="#">Показать все 15 комментариев</a></div>
+									<ul class="comments-list">
+										<li class="comments-list-item">
+											<div class="comments-list-item__avatar">
+												<div class="avatar avatar_size_small avatar_status_offline">
+													<div class="avatar__image">
+														<a href="#"><img src="img/avatars/small/2.jpg" /></a>
+													</div>
+												</div>
+											</div>
+											<div class="comments-list-item__info">
+												<div class="comments-list-item__name"><a href="#">Оксана Макарова</a><span class="comments-list-item__reply-to"></span></div>
+												<div class="comments-list-item__lang">
+													<div class="comments-list-item__flag">
+														<div class="flag flag_size_small">
+															<a href="#"><img src="img/flags/small/2.png" /></a>
+														</div>
+													</div>
+													<div class="comments-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+												</div>
+												<div class="comments-list-item__text">Боже, какая красота! Гора Фицрой- прекраснейшая!! Спасибо за радость от просмотра фото).<br>АААААА!!!! Классс!!!! Невероятно красивая природа! Потрясающие места и виды!</div>
+												<div class="comments-list-item__other">
+													<div class="comments-list-item__date"><a href="#">25 минут назад</a></div>
+													<div class="comments-list-item__reply"><a href="#">Ответить</a></div>
+													<div class="comments-list-item__like">
+														<div class="like"><a href="#">мне нравится</a></div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="comments-list-item">
+											<div class="comments-list-item__avatar">
+												<div class="avatar avatar_size_small avatar_status_online">
+													<div class="avatar__image">
+														<a href="#"><img src="img/avatars/small/3.jpg" /></a>
+													</div>
+												</div>
+											</div>
+											<div class="comments-list-item__info">
+												<div class="comments-list-item__name"><a href="#">София Бандарчук</a><span class="comments-list-item__reply-to">ответила Оксане Макаровой</span></div>
+												<div class="comments-list-item__lang">
+													<div class="comments-list-item__flag">
+														<div class="flag flag_size_small">
+															<a href="#"><img src="img/flags/small/3.png" /></a>
+														</div>
+													</div>
+													<div class="comments-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+												</div>
+												<div class="comments-list-item__text">А я там была =P<br>По природе у меня возникли некоторые ассоциации с Новой Зеландией. Хотя и сложно сравнивать!</div>
+												<div class="comments-list-item__other">
+													<div class="comments-list-item__date"><a href="#">25 минут назад</a></div>
+													<div class="comments-list-item__reply"><a href="#">Ответить</a></div>
+													<div class="comments-list-item__like">
+														<div class="like like_active"><a href="#">мне нравится</a></div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<div class="comments-new-item">
+										<form class="comments-new-item__form"><textarea class="comments-new-item__textarea" placeholder="Комментировать..."></textarea>
+											<div class="comments-new-item__controls"><button class="comments-new-item__button" type="submit">Отправить</button></div>
+											<div class="comments-new-item__avatar">
+												<div class="avatar avatar_size_small">
+													<div class="avatar__image">
+														<a href="#"><img src="img/avatars/small/1.jpg" /></a>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup" id="video">
+					<h3 class="popup__title">Основной альбом  (10 из 345)<a class="popup__close">Закрыть</a></h3>
+					<div class="popup__content">
+						<div class="video">
+							<div class="video__avatar">
+								<div class="avatar avatar_size_big">
+									<div class="avatar__image">
+										<a href="#"><img src="img/avatars/big/4.jpg" /></a>
+									</div>
+								</div>
+							</div>
+							<div class="video__text">Гора Фицрой находится в территории национального парка Лос‑Гласьярес, на границе между<br>Аргентиной и Чили. Окрестности вершины опутаны множеством трекинговых троп, популярных среди туристов. Самый ближайший населенный пункт — Эль‑Чалтен, откуда
+								ходит автобус из Эль‑Калафате.<br>Самый ближайший населенный пункт — Эль‑Чалтен, откуда ходит автобус из Эль‑Калафате.</div>
+							<div class="video-controls">
+								<ul class="video-controls__list">
+									<li class="video-controls__list-item"><a href="#">Удалить</a></li>
+									<li class="video-controls__list-item"><a href="#">Перенести</a></li>
+									<li class="video-controls__list-item"><a href="#">Поделиться</a></li>
+								</ul>
+							</div>
+							<div class="video__show">
+								<div class="video__image">
+									<a href="#"><img src="img/photos/big/3.jpg" /></a>
+								</div><a class="video__previous">Предыдущее</a><a class="video__next">Следующее</a></div>
+							<div class="video__other">
+								<div class="video__date"><a href="#">сегодня в 9:58</a></div>
+								<div class="video__comment"><a href="#">Комментировать</a></div>
+								<div class="video__like">
+									<div class="like"><a href="#">мне нравится</a></div>
+								</div>
+							</div>
+							<div class="video__comments">
+								<div class="comments">
+									<div class="comments__show-all"><a href="#">Показать все 15 комментариев</a></div>
+									<ul class="comments-list">
+										<li class="comments-list-item">
+											<div class="comments-list-item__avatar">
+												<div class="avatar avatar_size_small avatar_status_offline">
+													<div class="avatar__image">
+														<a href="#"><img src="img/avatars/small/2.jpg" /></a>
+													</div>
+												</div>
+											</div>
+											<div class="comments-list-item__info">
+												<div class="comments-list-item__name"><a href="#">Оксана Макарова</a><span class="comments-list-item__reply-to"></span></div>
+												<div class="comments-list-item__lang">
+													<div class="comments-list-item__flag">
+														<div class="flag flag_size_small">
+															<a href="#"><img src="img/flags/small/2.png" /></a>
+														</div>
+													</div>
+													<div class="comments-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+												</div>
+												<div class="comments-list-item__text">Боже, какая красота! Гора Фицрой- прекраснейшая!! Спасибо за радость от просмотра фото).<br>АААААА!!!! Классс!!!! Невероятно красивая природа! Потрясающие места и виды!</div>
+												<div class="comments-list-item__other">
+													<div class="comments-list-item__date"><a href="#">25 минут назад</a></div>
+													<div class="comments-list-item__reply"><a href="#">Ответить</a></div>
+													<div class="comments-list-item__like">
+														<div class="like"><a href="#">мне нравится</a></div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="comments-list-item">
+											<div class="comments-list-item__avatar">
+												<div class="avatar avatar_size_small avatar_status_online">
+													<div class="avatar__image">
+														<a href="#"><img src="img/avatars/small/3.jpg" /></a>
+													</div>
+												</div>
+											</div>
+											<div class="comments-list-item__info">
+												<div class="comments-list-item__name"><a href="#">София Бандарчук</a><span class="comments-list-item__reply-to">ответила Оксане Макаровой</span></div>
+												<div class="comments-list-item__lang">
+													<div class="comments-list-item__flag">
+														<div class="flag flag_size_small">
+															<a href="#"><img src="img/flags/small/3.png" /></a>
+														</div>
+													</div>
+													<div class="comments-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+												</div>
+												<div class="comments-list-item__text">А я там была =P<br>По природе у меня возникли некоторые ассоциации с Новой Зеландией. Хотя и сложно сравнивать!</div>
+												<div class="comments-list-item__other">
+													<div class="comments-list-item__date"><a href="#">25 минут назад</a></div>
+													<div class="comments-list-item__reply"><a href="#">Ответить</a></div>
+													<div class="comments-list-item__like">
+														<div class="like like_active"><a href="#">мне нравится</a></div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<div class="comments-new-item">
+										<form class="comments-new-item__form"><textarea class="comments-new-item__textarea" placeholder="Комментировать..."></textarea>
+											<div class="comments-new-item__controls"><button class="comments-new-item__button" type="submit">Отправить</button></div>
+											<div class="comments-new-item__avatar">
+												<div class="avatar avatar_size_small">
+													<div class="avatar__image">
+														<a href="#"><img src="img/avatars/small/1.jpg" /></a>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
+		<script src="bower_components/jquery.form-styler/jquery.formstyler.min.js"></script>
+		<script src="bower_components/jquery.ztabs/jquery.ztabs.js"></script>
+		<script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+		<script src="bower_components/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+		<script src="bower_components/jquery-dropdown/jquery.dropdown.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+
+</html>

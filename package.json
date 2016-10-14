@@ -1,0 +1,18 @@
+{
+	"name": "project",
+	"version": "1.0.0",
+	"dependencies": {
+		"browser-sync": "*",
+		"gulp": "*",
+		"gulp-concat": "*",
+		"gulp-plumber": "*",
+		"gulp-autoprefixer": "*",
+		"gulp-rigger": "*",
+		"gulp-sass": "*",
+		"gulp-watch": "*",
+		"gulp-bemjson2html": "*",
+		"gulp-rename": "*",
+		"gulp-prettify": "*",
+		"rimraf": "*"
+	}
+}
