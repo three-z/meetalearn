@@ -85,152 +85,239 @@
 			</div>
 			<div class="content">
 				<div class="content__layout container">
-					<h1 class="page-title page-title_type_top">Центр изучения иностранных языков</h1>
+					<h1 class="page-title">Поиск по пользователю</h1>
+					<div class="filter-top">
+						<div class="filter-top__layout">
+							<div class="filter-top__layout-left">
+								<div class="filter-top__columns">
+									<div class="filter-top__column"><label class="filter-top__label" for="group-users-filter-country">Страна</label>
+										<div class="filter-top__field"><select class="filter-top__select" id="group-users-filter-country" name="group-users-filter-country"><option value="Франция">Франция</option><option value="Португалия" selected="">Португалия</option><option value="Россия">Россия</option></select></div>
+									</div>
+									<div class="filter-top__column"><label class="filter-top__label" for="group-users-filter-native-language">Родной язык</label>
+										<div class="filter-top__field"><select class="filter-top__select" id="group-users-filter-native-language" name="group-users-filter-native-language"><option value="Французский">Французский</option><option value="Португальский" selected="">Португальский</option><option value="Русский">Русский</option></select></div>
+									</div>
+									<div class="filter-top__column"><label class="filter-top__label" for="exchange-filter-learning-language">Изучаемый язык</label>
+										<div class="filter-top__field"><select class="filter-top__select" id="exchange-filter-learning-language" name="exchange-filter-learning-language"><option value="Французский" selected="">Французский</option><option value="Португальский">Португальский</option><option value="Русский">Русский</option></select></div>
+									</div>
+									<div class="filter-top__column"><label class="filter-top__label" for="exchange-filter-age">Возраст</label>
+										<div class="filter-top__field"><select class="filter-top__select" id="exchange-filter-age" name="exchange-filter-age-from"><option value="18">18</option><option value="21" selected="">21</option><option value="25">25</option><option value="30">30</option><option value="40">40</option><option value="50">50</option><option value="60">60</option><option value="18">70</option><option value="80">80</option><option value="90">90</option><option value="100">100</option></select>
+											<span
+												class="filter-top__spacer">-</span><select class="filter-top__select" name="exchange-filter-age-to"><option value="18">18</option><option value="21">21</option><option value="25">25</option><option value="30">30</option><option value="40">40</option><option value="50">50</option><option value="60">60</option><option value="18">70</option><option value="80">80</option><option value="90">90</option><option value="100" selected="">100</option></select></div>
+									</div>
+								</div>
+							</div>
+							<div class="filter-top__layout-right">
+								<div class="filter-gender"><label class="filter-gender__label" for="exchange-filter-gender">Пол</label>
+									<div class="filter-gender__field"><label class="filter-gender__radio-label"><input class="filter-gender__radio filter-gender__radio_type_male" type="radio" name="exchange-filter-gender" id="exchange-filter-gender" value="male"/>М.</label><label class="filter-gender__radio-label"><input class="filter-gender__radio filter-gender__radio_type_female" type="radio" name="exchange-filter-gender" value="female"/>Ж.</label>
+										<label
+											class="filter-gender__radio-label"><input class="filter-gender__radio filter-gender__radio_type_any" type="radio" name="exchange-filter-gender" value="any" checked="" />Любой</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 					<div class="filter-bottom">
-						<div class="filter-search">
-							<div class="filter-search__form">
-								<div class="filter-search__field"><input class="filter-search__input" type="text" placeholder="Введите имя" /></div>
-								<div class="filter-search__controls"><button class="filter-search__button" type="submit">Найти</button></div>
+						<div class="filter-bottom__layout">
+							<div class="filter-bottom__layout-left">
+								<div class="filter-search">
+									<div class="filter-search__form">
+										<div class="filter-search__field"><input class="filter-search__input" type="text" placeholder="Введите имя" /></div>
+										<div class="filter-search__controls"><button class="filter-search__button" type="submit">Найти</button></div>
+									</div>
+								</div>
+							</div>
+							<div class="filter-bottom__layout-right">
+								<div class="filter-options">
+									<div class="filter-options__field"><label class="filter-options__checkbox-label"><input class="filter-options__checkbox" type="checkbox" name="exchange-filter-photo" value="yes" checked=""/>С фотографией</label><label class="filter-options__checkbox-label"><input class="filter-options__checkbox" type="checkbox" name="exchange-filter-online" value="yes" checked=""/>В сети</label></div>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="search-result">
-						<div class="search-result__count">Найдено 526 человек
-							<div class="search-result-switcher">
-								<ul class="search-result-switcher__list">
-									<li class="search-result-switcher__list-item"><a href="#">Мои группы</a></li>
-									<li class="search-result-switcher__list-item"><a href="#">Я владелец</a></li>
-								</ul>
-							</div>
-							<div class="page-title-controls">
-								<ul class="page-title-controls__list">
-									<li class="page-title-controls__list-item page-title-controls__list-item_type_add"><a href="#">Создать группу</a></li>
-								</ul>
-							</div>
-						</div>
+						<div class="search-result__count">Найдено 15 друзей</div>
 						<ul class="search-result-list">
 							<li class="search-result-list-item">
 								<div class="search-result-list-item__avatar">
-									<div class="avatar avatar_size_big">
+									<div class="avatar avatar_size_big avatar_status_online">
 										<div class="avatar__image">
-											<a href="#"><img src="img/avatars/big/5.jpg" /></a>
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
 										</div>
 									</div>
 								</div>
 								<div class="search-result-list-item__info">
-									<div class="search-result-list-item__name"><a href="#">Центр изучения иностранных языков</a></div>
-									<div class="search-result-list-item__count">1 148 763 подписчика</div>
-									<div class="search-result-list-item__description">Наше сообщество посвящено тем, кто начал учить иностранные языки и с тех пор не может остановиться. Мы учим языки, потому что от этого наш организм выделяет дофамин (это научно доказано), и мы хотим ещё и ещё. Мы учим языки, сидя у себя в комнатах,
-										и не всегда для того...</div>
+									<div class="search-result-list-item__name"><a href="#">Григорий Суворов</a></div>
+									<div class="search-result-list-item__lang">
+										<div class="search-result-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/1.png" /></a>
+											</div>
+										</div>
+										<div class="search-result-list-item__lang-info">Италия, Рим.<br>Родной язык - итальянский; изучаемый язык - английский.</div>
+									</div>
+									<div class="search-result-list-item__years">23 г., ж.</div>
 									<div class="search-result-list-item-controls">
 										<ul class="search-result-list-item-controls__list">
-											<li class="search-result-list-item-controls__list-item"><a href="#">Присоединиться</a></li>
-											<li class="search-result-list-item-controls__list-item"><a href="#">Участники группы</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Диалог</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Удалить из друзей</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Заблокировать</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Пожаловаться модератору</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Отправить сообщение</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Посмотреть друзей</a></li>
 										</ul>
 									</div>
 								</div>
 							</li>
 							<li class="search-result-list-item">
 								<div class="search-result-list-item__avatar">
-									<div class="avatar avatar_size_big">
+									<div class="avatar avatar_size_big avatar_status_offline">
 										<div class="avatar__image">
-											<a href="#"><img src="img/avatars/big/6.jpg" /></a>
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
 										</div>
 									</div>
 								</div>
 								<div class="search-result-list-item__info">
-									<div class="search-result-list-item__name"><a href="#">Центр изучения иностранных языков</a></div>
-									<div class="search-result-list-item__count">1 148 763 подписчика</div>
-									<div class="search-result-list-item__description">Наше сообщество посвящено тем, кто начал учить иностранные языки и с тех пор не может остановиться. Мы учим языки, потому что от этого наш организм выделяет дофамин (это научно доказано), и мы хотим ещё и ещё. Мы учим языки, сидя у себя в комнатах,
-										и не всегда для того...</div>
+									<div class="search-result-list-item__name"><a href="#">Анна Богданова</a></div>
+									<div class="search-result-list-item__lang">
+										<div class="search-result-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/2.png" /></a>
+											</div>
+										</div>
+										<div class="search-result-list-item__lang-info">Италия, Рим.<br>Родной язык - итальянский; изучаемый язык - английский.</div>
+									</div>
+									<div class="search-result-list-item__years">23 г., ж.</div>
 									<div class="search-result-list-item-controls">
 										<ul class="search-result-list-item-controls__list">
-											<li class="search-result-list-item-controls__list-item"><a href="#">Присоединиться</a></li>
-											<li class="search-result-list-item-controls__list-item"><a href="#">Участники группы</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Диалог</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Удалить из друзей</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Заблокировать</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Пожаловаться модератору</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Отправить сообщение</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Посмотреть друзей</a></li>
 										</ul>
 									</div>
 								</div>
 							</li>
 							<li class="search-result-list-item">
 								<div class="search-result-list-item__avatar">
-									<div class="avatar avatar_size_big">
+									<div class="avatar avatar_size_big avatar_status_online">
 										<div class="avatar__image">
-											<a href="#"><img src="img/avatars/big/5.jpg" /></a>
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
 										</div>
 									</div>
 								</div>
 								<div class="search-result-list-item__info">
-									<div class="search-result-list-item__name"><a href="#">Центр изучения иностранных языков</a></div>
-									<div class="search-result-list-item__count">1 148 763 подписчика</div>
-									<div class="search-result-list-item__description">Наше сообщество посвящено тем, кто начал учить иностранные языки и с тех пор не может остановиться. Мы учим языки, потому что от этого наш организм выделяет дофамин (это научно доказано), и мы хотим ещё и ещё. Мы учим языки, сидя у себя в комнатах,
-										и не всегда для того...</div>
+									<div class="search-result-list-item__name"><a href="#">Антон Виноградов</a></div>
+									<div class="search-result-list-item__lang">
+										<div class="search-result-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/3.png" /></a>
+											</div>
+										</div>
+										<div class="search-result-list-item__lang-info">Италия, Рим.<br>Родной язык - итальянский; изучаемый язык - английский.</div>
+									</div>
+									<div class="search-result-list-item__years">23 г., ж.</div>
 									<div class="search-result-list-item-controls">
 										<ul class="search-result-list-item-controls__list">
-											<li class="search-result-list-item-controls__list-item"><a href="#">Присоединиться</a></li>
-											<li class="search-result-list-item-controls__list-item"><a href="#">Участники группы</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Диалог</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Удалить из друзей</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Заблокировать</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Пожаловаться модератору</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Отправить сообщение</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Посмотреть друзей</a></li>
 										</ul>
 									</div>
 								</div>
 							</li>
 							<li class="search-result-list-item">
 								<div class="search-result-list-item__avatar">
-									<div class="avatar avatar_size_big">
+									<div class="avatar avatar_size_big avatar_status_online">
 										<div class="avatar__image">
-											<a href="#"><img src="img/avatars/big/6.jpg" /></a>
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
 										</div>
 									</div>
 								</div>
 								<div class="search-result-list-item__info">
-									<div class="search-result-list-item__name"><a href="#">Центр изучения иностранных языков</a></div>
-									<div class="search-result-list-item__count">1 148 763 подписчика</div>
-									<div class="search-result-list-item__description">Наше сообщество посвящено тем, кто начал учить иностранные языки и с тех пор не может остановиться. Мы учим языки, потому что от этого наш организм выделяет дофамин (это научно доказано), и мы хотим ещё и ещё. Мы учим языки, сидя у себя в комнатах,
-										и не всегда для того...</div>
+									<div class="search-result-list-item__name"><a href="#">Григорий Суворов</a></div>
+									<div class="search-result-list-item__lang">
+										<div class="search-result-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/1.png" /></a>
+											</div>
+										</div>
+										<div class="search-result-list-item__lang-info">Италия, Рим.<br>Родной язык - итальянский; изучаемый язык - английский.</div>
+									</div>
+									<div class="search-result-list-item__years">23 г., ж.</div>
 									<div class="search-result-list-item-controls">
 										<ul class="search-result-list-item-controls__list">
-											<li class="search-result-list-item-controls__list-item"><a href="#">Присоединиться</a></li>
-											<li class="search-result-list-item-controls__list-item"><a href="#">Участники группы</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Диалог</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Удалить из друзей</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Заблокировать</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Пожаловаться модератору</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Отправить сообщение</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Посмотреть друзей</a></li>
 										</ul>
 									</div>
 								</div>
 							</li>
 							<li class="search-result-list-item">
 								<div class="search-result-list-item__avatar">
-									<div class="avatar avatar_size_big">
+									<div class="avatar avatar_size_big avatar_status_offline">
 										<div class="avatar__image">
-											<a href="#"><img src="img/avatars/big/5.jpg" /></a>
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
 										</div>
 									</div>
 								</div>
 								<div class="search-result-list-item__info">
-									<div class="search-result-list-item__name"><a href="#">Центр изучения иностранных языков</a></div>
-									<div class="search-result-list-item__count">1 148 763 подписчика</div>
-									<div class="search-result-list-item__description">Наше сообщество посвящено тем, кто начал учить иностранные языки и с тех пор не может остановиться. Мы учим языки, потому что от этого наш организм выделяет дофамин (это научно доказано), и мы хотим ещё и ещё. Мы учим языки, сидя у себя в комнатах,
-										и не всегда для того...</div>
+									<div class="search-result-list-item__name"><a href="#">Анна Богданова</a></div>
+									<div class="search-result-list-item__lang">
+										<div class="search-result-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/2.png" /></a>
+											</div>
+										</div>
+										<div class="search-result-list-item__lang-info">Италия, Рим.<br>Родной язык - итальянский; изучаемый язык - английский.</div>
+									</div>
+									<div class="search-result-list-item__years">23 г., ж.</div>
 									<div class="search-result-list-item-controls">
 										<ul class="search-result-list-item-controls__list">
-											<li class="search-result-list-item-controls__list-item"><a href="#">Присоединиться</a></li>
-											<li class="search-result-list-item-controls__list-item"><a href="#">Участники группы</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Диалог</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Удалить из друзей</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Заблокировать</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Пожаловаться модератору</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Отправить сообщение</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Посмотреть друзей</a></li>
 										</ul>
 									</div>
 								</div>
 							</li>
 							<li class="search-result-list-item">
 								<div class="search-result-list-item__avatar">
-									<div class="avatar avatar_size_big">
+									<div class="avatar avatar_size_big avatar_status_online">
 										<div class="avatar__image">
-											<a href="#"><img src="img/avatars/big/6.jpg" /></a>
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
 										</div>
 									</div>
 								</div>
 								<div class="search-result-list-item__info">
-									<div class="search-result-list-item__name"><a href="#">Центр изучения иностранных языков</a></div>
-									<div class="search-result-list-item__count">1 148 763 подписчика</div>
-									<div class="search-result-list-item__description">Наше сообщество посвящено тем, кто начал учить иностранные языки и с тех пор не может остановиться. Мы учим языки, потому что от этого наш организм выделяет дофамин (это научно доказано), и мы хотим ещё и ещё. Мы учим языки, сидя у себя в комнатах,
-										и не всегда для того...</div>
+									<div class="search-result-list-item__name"><a href="#">Антон Виноградов</a></div>
+									<div class="search-result-list-item__lang">
+										<div class="search-result-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/3.png" /></a>
+											</div>
+										</div>
+										<div class="search-result-list-item__lang-info">Италия, Рим.<br>Родной язык - итальянский; изучаемый язык - английский.</div>
+									</div>
+									<div class="search-result-list-item__years">23 г., ж.</div>
 									<div class="search-result-list-item-controls">
 										<ul class="search-result-list-item-controls__list">
-											<li class="search-result-list-item-controls__list-item"><a href="#">Присоединиться</a></li>
-											<li class="search-result-list-item-controls__list-item"><a href="#">Участники группы</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Диалог</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Удалить из друзей</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Заблокировать</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Пожаловаться модератору</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Отправить сообщение</a></li>
+											<li class="search-result-list-item-controls__list-item"><a href="#">Посмотреть друзей</a></li>
 										</ul>
 									</div>
 								</div>

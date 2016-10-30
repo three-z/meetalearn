@@ -1,10 +1,18 @@
 $(document).ready(function() {
 
-	activeCallback.add(function() {});
-
-	$('.page input[type="radio"],' +
-		'.page input[type="checkbox"],' +
-		'.page select').styler();
+	activeCallback.add(function() {
+		$('.page input[type="radio"],' +
+		  '.fancybox-skin input[type="radio"],' +
+		  '.page input[type="checkbox"],' +
+		  '.fancybox-skin input[type="checkbox"],' +
+		  '.page input[type="file"],' +
+		  '.fancybox-skin input[type="file"],' +
+		  '.page select,' +
+		  '.fancybox-skin select').styler({
+			fileBrowse: 'Выбрать файл',
+			filePlaceholder: ''
+		});
+	});
 
 	$('.filter-languages').mCustomScrollbar({
 		scrollInertia: '0',
