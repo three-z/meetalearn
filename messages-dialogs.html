@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" />
+		<link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
+		<link rel="stylesheet" href="bower_components/jquery.form-styler/jquery.formstyler.css" />
+		<link rel="stylesheet" href="bower_components/fancybox/source/jquery.fancybox.css" />
+		<link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
+		<link rel="stylesheet" href="bower_components/tooltipster/dist/css/tooltipster.bundle.min.css" />
+		<link rel="stylesheet" href="bower_components/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css" />
+		<link rel="stylesheet" href="bower_components/jquery-dropdown/jquery.dropdown.min.css" />
+		<link rel="stylesheet" href="css/app.css" />
+	</head>
+
+	<body>
+		<div class="page">
+			<div class="header">
+				<div class="header-top">
+					<div class="header-top__layout container">
+						<div class="header-top__layout-left">
+							<div class="header-logo">
+								<a href="#"><img src="img/header/logo.png" width="120px" height="20px" /></a>
+							</div>
+						</div>
+						<div class="header-top__layout-right">
+							<div class="header-search">
+								<form class="header-search__form">
+									<div class="header-search__field"><input class="header-search__input" type="text" placeholder="Поиск" /></div>
+									<div class="header-search__controls"><button class="header-search__button" type="submit">Найти</button></div>
+								</form>
+							</div>
+							<div class="header-profile"><a href="#"><span class="header-profile__avatar"><img src="img/avatars/mini/1.jpg"/></span><span class="header-profile__name">Григорий<br>Суворов</span></a></div>
+							<div class="header-settings">
+								<div class="header-settings__button"><a href="#" data-jq-dropdown="#jq-dropdown-settings">Настройки</a></div>
+								<div class="jq-dropdown" id="jq-dropdown-settings">
+									<ul class="jq-dropdown-menu">
+										<li><a href="#">Настройки</a></li>
+										<li><a href="#">Помощь</a></li>
+										<li class="jq-dropdown-divider"></li>
+										<li><a href="#">Выход</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="header-exit"><a href="#">Выйти</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="header-bottom">
+					<div class="header-bottom__layout container">
+						<div class="header-navigation">
+							<ul class="header-navigation__list">
+								<li class="header-navigation__list-item header-navigation__list-item_active"><a href="#">Главная</a></li>
+								<li class="header-navigation__list-item"><a href="#">Языковой обмен</a></li>
+								<li class="header-navigation__list-item"><a href="#">Профиль</a></li>
+								<li class="header-navigation__list-item"><a href="#">Мои новости</a></li>
+								<li class="header-navigation__list-item"><a href="#">Группы</a></li>
+								<li class="header-navigation__list-item"><a href="#">Друзья<span class="header-navigation__count">105</span></a></li>
+								<li class="header-navigation__list-item"><a href="#">Сообщения<span class="header-navigation__count">7</span></a></li>
+								<li class="header-navigation__list-item"><a href="#">Фотографии</a></li>
+								<li class="header-navigation__list-item"><a href="#">Видео</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="content__layout container">
+					<h1 class="page-title page-title_type_top">Сообщения</h1>
+					<div class="filter-bottom filter-bottom_type_bottom">
+						<div class="filter-bottom__layout">
+							<div class="filter-bottom__layout-switch">
+								<div class="filter-switcher">
+									<ul class="filter-switcher__list">
+										<li class="filter-switcher__list-item"><a href="#">Все сообщения</a></li>
+										<li class="filter-switcher__list-item filter-switcher__list-item_active"><a href="#">Диалоги</a></li>
+										<li class="filter-switcher__list-item"><a href="#">Беседы</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="filter-bottom__layout-center">
+								<div class="filter-search">
+									<div class="filter-search__form">
+										<div class="filter-search__field"><input class="filter-search__input" type="text" placeholder="Поиск" /></div>
+										<div class="filter-search__controls"><button class="filter-search__button" type="submit">Найти</button></div>
+									</div>
+								</div>
+							</div>
+							<div class="filter-bottom__layout-right">
+								<div class="filter-options">
+									<div class="filter-options__field"><label class="filter-options__checkbox-label"><input class="filter-options__checkbox" type="checkbox" name="filter-online" value="yes" checked=""/>Online</label></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="messages">
+						<ul class="messages-list">
+							<li class="messages-list-item">
+								<div class="messages-list-item__avatars">
+									<div class="messages-list-item__avatar">
+										<div class="avatar avatar_size_big avatar_status_online">
+											<div class="avatar__image">
+												<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="messages-list-item__info">
+									<div class="messages-list-item__name"><a href="#">Григорий Суворов</a></div>
+									<div class="messages-list-item__lang">
+										<div class="messages-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/1.png" /></a>
+											</div>
+										</div>
+										<div class="messages-list-item__lang-info">Италия, Рим.<br>Родной язык - итальянский; изучаемый язык - английский.</div>
+									</div>
+									<div class="messages-list-item__text">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights. We got equipped for this trip and our friends over at Bayerncar Oy offered us a nice BMW X5 that fit all of our gear for the
+										drive to Norway. </div>
+									<div class="messages-list-item-controls">
+										<ul class="messages-list-item-controls__list">
+											<li class="messages-list-item-controls__list-item messages-list-item-controls__list-item_type_date">21 ноя 2015</li>
+											<li class="messages-list-item-controls__list-item messages-list-item-controls__list-item_type_delete tooltip" title="Удалить"><a href="#">Удалить</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="messages-list-item">
+								<div class="messages-list-item__avatars">
+									<div class="messages-list-item__avatar">
+										<div class="avatar avatar_size_big avatar_status_online">
+											<div class="avatar__image">
+												<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="messages-list-item__info">
+									<div class="messages-list-item__name"><a href="#">Антон Виноградов</a></div>
+									<div class="messages-list-item__lang">
+										<div class="messages-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/1.png" /></a>
+											</div>
+										</div>
+										<div class="messages-list-item__lang-info">Италия, Рим.<br>Родной язык - итальянский; изучаемый язык - английский.</div>
+									</div>
+									<div class="messages-list-item__text">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights. We got equipped for this trip and our friends over at Bayerncar Oy offered us a nice BMW X5 that fit all of our gear for the
+										drive to Norway. </div>
+									<div class="messages-list-item-controls">
+										<ul class="messages-list-item-controls__list">
+											<li class="messages-list-item-controls__list-item messages-list-item-controls__list-item_type_date">21 ноя 2015</li>
+											<li class="messages-list-item-controls__list-item messages-list-item-controls__list-item_type_delete tooltip" title="Удалить"><a href="#">Удалить</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="messages-list-item">
+								<div class="messages-list-item__avatars">
+									<div class="messages-list-item__avatar">
+										<div class="avatar avatar_size_big avatar_status_online">
+											<div class="avatar__image">
+												<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="messages-list-item__info">
+									<div class="messages-list-item__name"><a href="#">Григорий Суворов</a></div>
+									<div class="messages-list-item__lang">
+										<div class="messages-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/1.png" /></a>
+											</div>
+										</div>
+										<div class="messages-list-item__lang-info">Италия, Рим.<br>Родной язык - итальянский; изучаемый язык - английский.</div>
+									</div>
+									<div class="messages-list-item__text">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights. We got equipped for this trip and our friends over at Bayerncar Oy offered us a nice BMW X5 that fit all of our gear for the
+										drive to Norway. </div>
+									<div class="messages-list-item-controls">
+										<ul class="messages-list-item-controls__list">
+											<li class="messages-list-item-controls__list-item messages-list-item-controls__list-item_type_date">21 ноя 2015</li>
+											<li class="messages-list-item-controls__list-item messages-list-item-controls__list-item_type_delete tooltip" title="Удалить"><a href="#">Удалить</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="messages-list-item">
+								<div class="messages-list-item__avatars">
+									<div class="messages-list-item__avatar">
+										<div class="avatar avatar_size_big avatar_status_online">
+											<div class="avatar__image">
+												<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="messages-list-item__info">
+									<div class="messages-list-item__name"><a href="#">Анна Богданова</a></div>
+									<div class="messages-list-item__lang">
+										<div class="messages-list-item__flag">
+											<div class="flag flag_size_small">
+												<a href="#"><img src="img/flags/small/1.png" /></a>
+											</div>
+										</div>
+										<div class="messages-list-item__lang-info">Италия, Рим.<br>Родной язык - итальянский; изучаемый язык - английский.</div>
+									</div>
+									<div class="messages-list-item__text">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights. We got equipped for this trip and our friends over at Bayerncar Oy offered us a nice BMW X5 that fit all of our gear for the
+										drive to Norway. </div>
+									<div class="messages-list-item-controls">
+										<ul class="messages-list-item-controls__list">
+											<li class="messages-list-item-controls__list-item messages-list-item-controls__list-item_type_date">21 ноя 2015</li>
+											<li class="messages-list-item-controls__list-item messages-list-item-controls__list-item_type_delete tooltip" title="Удалить"><a href="#">Удалить</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="go-up"><a href="#">Up</a></div>
+			<div class="fast-messages">
+				<div class="fast-messages-popup" id="fast-messages-inbox">
+					<div class="fast-messages-popup__title">Сообщения<a class="fast-messages-popup__close">Закрыть</a></div>
+					<div class="fast-messages-popup__content">
+						<div class="fast-messages-inbox">
+							<ul class="fast-messages-inbox-list">
+								<li class="fast-messages-inbox-list-item">
+									<div class="fast-messages-inbox-list-item__other">
+										<div class="fast-messages-inbox-list-item__avatar">
+											<div class="avatar avatar_size_tiny">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/tiny/1.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__info">
+										<div class="fast-messages-inbox-list-item__name">Константин Барсуков</div>
+										<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.</a></div>
+									</div>
+								</li>
+								<li class="fast-messages-inbox-list-item">
+									<div class="fast-messages-inbox-list-item__other">
+										<div class="fast-messages-inbox-list-item__avatar">
+											<div class="avatar avatar_size_tiny">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/tiny/2.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__info">
+										<div class="fast-messages-inbox-list-item__name">Марина Соловьева</div>
+										<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during.</a></div>
+									</div>
+								</li>
+								<li class="fast-messages-inbox-list-item">
+									<div class="fast-messages-inbox-list-item__other">
+										<div class="fast-messages-inbox-list-item__avatar">
+											<div class="avatar avatar_size_tiny">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/tiny/1.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__info">
+										<div class="fast-messages-inbox-list-item__name">Константин Барсуков</div>
+										<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.</a></div>
+									</div>
+								</li>
+								<li class="fast-messages-inbox-list-item">
+									<div class="fast-messages-inbox-list-item__other">
+										<div class="fast-messages-inbox-list-item__avatar">
+											<div class="avatar avatar_size_tiny">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/tiny/2.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__info">
+										<div class="fast-messages-inbox-list-item__name">Марина Соловьева</div>
+										<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during.</a></div>
+									</div>
+								</li>
+								<li class="fast-messages-inbox-list-item">
+									<div class="fast-messages-inbox-list-item__other">
+										<div class="fast-messages-inbox-list-item__avatar">
+											<div class="avatar avatar_size_tiny">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/tiny/1.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__info">
+										<div class="fast-messages-inbox-list-item__name">Константин Барсуков</div>
+										<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.</a></div>
+									</div>
+								</li>
+								<li class="fast-messages-inbox-list-item">
+									<div class="fast-messages-inbox-list-item__other">
+										<div class="fast-messages-inbox-list-item__avatar">
+											<div class="avatar avatar_size_tiny">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/tiny/2.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__info">
+										<div class="fast-messages-inbox-list-item__name">Марина Соловьева</div>
+										<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during.</a></div>
+									</div>
+								</li>
+								<li class="fast-messages-inbox-list-item">
+									<div class="fast-messages-inbox-list-item__other">
+										<div class="fast-messages-inbox-list-item__avatar">
+											<div class="avatar avatar_size_tiny">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/tiny/1.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__info">
+										<div class="fast-messages-inbox-list-item__name">Константин Барсуков</div>
+										<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.</a></div>
+									</div>
+								</li>
+								<li class="fast-messages-inbox-list-item">
+									<div class="fast-messages-inbox-list-item__other">
+										<div class="fast-messages-inbox-list-item__avatar">
+											<div class="avatar avatar_size_tiny">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/tiny/2.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__info">
+										<div class="fast-messages-inbox-list-item__name">Марина Соловьева</div>
+										<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during.</a></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="fast-messages-popup" id="fast-messages-dialog">
+					<div class="fast-messages-popup__title">Константин Барсуков<a class="fast-messages-popup__close">Закрыть</a></div>
+					<div class="fast-messages-popup__content">
+						<div class="fast-messages-dialog">
+							<ul class="fast-messages-dialog-list">
+								<li class="fast-messages-dialog-list-item">
+									<div class="fast-messages-dialog-list-item__user">
+										<div class="fast-messages-dialog-list-item__other">
+											<div class="fast-messages-dialog-list-item__avatar">
+												<div class="avatar avatar_size_tiny">
+													<div class="avatar__image">
+														<a href="#"><img src="img/avatars/tiny/1.jpg" /></a>
+													</div>
+												</div>
+											</div>
+											<div class="fast-messages-dialog-list-item__date">16 июн<br>в 16:49</div>
+										</div>
+										<div class="fast-messages-dialog-list-item__info">
+											<div class="fast-messages-dialog-list-item__name">Константин Барсуков</div>
+											<div class="fast-messages-dialog-list-item__text">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.</div>
+										</div>
+									</div>
+								</li>
+								<li class="fast-messages-dialog-list-item">
+									<div class="fast-messages-dialog-list-item__self">
+										<div class="fast-messages-dialog-list-item__self-text">Реализовать вложенность фотографий в папки.</div>
+										<div class="fast-messages-dialog-list-item__self-date">16 июн в 16:49</div>
+									</div>
+								</li>
+								<li class="fast-messages-dialog-list-item">
+									<div class="fast-messages-dialog-list-item__user">
+										<div class="fast-messages-dialog-list-item__other">
+											<div class="fast-messages-dialog-list-item__avatar">
+												<div class="avatar avatar_size_tiny">
+													<div class="avatar__image">
+														<a href="#"><img src="img/avatars/tiny/1.jpg" /></a>
+													</div>
+												</div>
+											</div>
+											<div class="fast-messages-dialog-list-item__date">16 июн<br>в 16:49</div>
+										</div>
+										<div class="fast-messages-dialog-list-item__info">
+											<div class="fast-messages-dialog-list-item__name">Константин Барсуков</div>
+											<div class="fast-messages-dialog-list-item__text">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.</div>
+										</div>
+									</div>
+								</li>
+								<li class="fast-messages-dialog-list-item">
+									<div class="fast-messages-dialog-list-item__self">
+										<div class="fast-messages-dialog-list-item__self-text">Реализовать вложенность фотографий в папки.</div>
+										<div class="fast-messages-dialog-list-item__self-date">16 июн в 16:49</div>
+									</div>
+								</li>
+								<li class="fast-messages-dialog-list-item">
+									<div class="fast-messages-dialog-list-item__user">
+										<div class="fast-messages-dialog-list-item__other">
+											<div class="fast-messages-dialog-list-item__avatar">
+												<div class="avatar avatar_size_tiny">
+													<div class="avatar__image">
+														<a href="#"><img src="img/avatars/tiny/1.jpg" /></a>
+													</div>
+												</div>
+											</div>
+											<div class="fast-messages-dialog-list-item__date">16 июн<br>в 16:49</div>
+										</div>
+										<div class="fast-messages-dialog-list-item__info">
+											<div class="fast-messages-dialog-list-item__name">Константин Барсуков</div>
+											<div class="fast-messages-dialog-list-item__text">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.</div>
+										</div>
+									</div>
+								</li>
+								<li class="fast-messages-dialog-list-item">
+									<div class="fast-messages-dialog-list-item__self">
+										<div class="fast-messages-dialog-list-item__self-text">Реализовать вложенность фотографий в папки.</div>
+										<div class="fast-messages-dialog-list-item__self-date">16 июн в 16:49</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="fast-messages-dialog-new"><textarea class="fast-messages-dialog-new__textarea" placeholder="Сообщение..."></textarea></div>
+					</div>
+				</div><a class="fast-messages-count" href="#"><span class="fast-messages-count__notification">7</span></a></div>
+			<div class="push"></div>
+		</div>
+		<div class="footer">
+			<div class="footer__layout container">
+				<div class="footer__layout-left">
+					<div class="footer-navigation">
+						<ul class="footer-navigation__list">
+							<li class="footer-navigation__list-item"><a href="#">о сайте</a></li>
+							<li class="footer-navigation__list-item"><a href="#">помощь</a></li>
+							<li class="footer-navigation__list-item"><a href="#">правила</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__layout-middle">
+					<div class="footer-copyright">Copyright © 2016 <a href="#">Meetalearn</a>. All Rights reserved.</div>
+				</div>
+				<div class="footer__layout-right">
+					<div class="footer-develop">сайт разработан в <a href="#">Leeft</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="popups">
+			<div class="popup popup_type_media" id="photo">
+				<h3 class="popup__title">Основной альбом  (10 из 345)<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="media">
+						<div class="media__avatar">
+							<div class="avatar avatar_size_big">
+								<div class="avatar__image">
+									<a href="#"><img src="img/avatars/big/4.jpg" /></a>
+								</div>
+							</div>
+						</div>
+						<div class="media__text">Гора Фицрой находится в территории национального парка Лос‑Гласьярес, на границе между<br>Аргентиной и Чили. Окрестности вершины опутаны множеством трекинговых троп, популярных среди туристов. Самый ближайший населенный пункт — Эль‑Чалтен, откуда
+							ходит автобус из Эль‑Калафате.<br>Самый ближайший населенный пункт — Эль‑Чалтен, откуда ходит автобус из Эль‑Калафате.</div>
+						<div class="media-controls">
+							<ul class="media-controls__list">
+								<li class="media-controls__list-item"><a href="#">Удалить</a></li>
+								<li class="media-controls__list-item"><a href="#">Перенести</a></li>
+								<li class="media-controls__list-item"><a href="#">Поделиться</a></li>
+							</ul>
+						</div>
+						<div class="media__show">
+							<div class="media__image">
+								<a href="#"><img src="img/photos/big/3.jpg" /></a>
+							</div><a class="media__previous">Предыдущее</a><a class="media__next">Следующее</a></div>
+						<div class="media__other">
+							<div class="media__date"><a href="#">сегодня в 9:58</a></div>
+							<div class="media__comment"><a href="#">Комментировать</a></div>
+							<div class="media__like">
+								<div class="like"><a href="#">мне нравится</a></div>
+							</div>
+						</div>
+						<div class="media__comments">
+							<div class="comments">
+								<div class="comments__show-all"><a href="#">Показать все 15 комментариев</a></div>
+								<ul class="comments-list">
+									<li class="comments-list-item">
+										<div class="comments-list-item__avatar">
+											<div class="avatar avatar_size_small avatar_status_offline">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/small/2.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="comments-list-item__info">
+											<div class="comments-list-item__name"><a href="#">Оксана Макарова</a><span class="comments-list-item__reply-to"></span></div>
+											<div class="comments-list-item__lang">
+												<div class="comments-list-item__flag">
+													<div class="flag flag_size_small">
+														<a href="#"><img src="img/flags/small/2.png" /></a>
+													</div>
+												</div>
+												<div class="comments-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+											</div>
+											<div class="comments-list-item__text">Боже, какая красота! Гора Фицрой- прекраснейшая!! Спасибо за радость от просмотра фото).<br>АААААА!!!! Классс!!!! Невероятно красивая природа! Потрясающие места и виды!</div>
+											<div class="comments-list-item__other">
+												<div class="comments-list-item__date"><a href="#">25 минут назад</a></div>
+												<div class="comments-list-item__reply"><a href="#">Ответить</a></div>
+												<div class="comments-list-item__like">
+													<div class="like"><a href="#">мне нравится</a></div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="comments-list-item">
+										<div class="comments-list-item__avatar">
+											<div class="avatar avatar_size_small avatar_status_online">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/small/3.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="comments-list-item__info">
+											<div class="comments-list-item__name"><a href="#">София Бандарчук</a><span class="comments-list-item__reply-to">ответила Оксане Макаровой</span></div>
+											<div class="comments-list-item__lang">
+												<div class="comments-list-item__flag">
+													<div class="flag flag_size_small">
+														<a href="#"><img src="img/flags/small/3.png" /></a>
+													</div>
+												</div>
+												<div class="comments-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+											</div>
+											<div class="comments-list-item__text">А я там была =P<br>По природе у меня возникли некоторые ассоциации с Новой Зеландией. Хотя и сложно сравнивать!</div>
+											<div class="comments-list-item__other">
+												<div class="comments-list-item__date"><a href="#">25 минут назад</a></div>
+												<div class="comments-list-item__reply"><a href="#">Ответить</a></div>
+												<div class="comments-list-item__like">
+													<div class="like like_active"><a href="#">мне нравится</a></div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<div class="comments-new-item">
+									<form class="comments-new-item__form"><textarea class="comments-new-item__textarea" placeholder="Комментировать..."></textarea>
+										<div class="comments-new-item__controls"><button class="comments-new-item__button" type="submit">Отправить</button></div>
+										<div class="comments-new-item__avatar">
+											<div class="avatar avatar_size_small">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/small/1.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="comments-new-item-attach">
+											<ul class="comments-new-item-attach__list">
+												<li class="comments-new-item-attach__list-item comments-new-item-attach__list-item_type_video tooltip" title="Прикрепить видео"><a href="#">Прикрепить видео</a></li>
+												<li class="comments-new-item-attach__list-item comments-new-item-attach__list-item_type_photo tooltip" title="Прикрепить фото"><a href="#">Прикрепить фото</a></li>
+											</ul>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="popup popup_type_media" id="video">
+				<h3 class="popup__title">Основной альбом  (10 из 345)<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="media">
+						<div class="media__avatar">
+							<div class="avatar avatar_size_big">
+								<div class="avatar__image">
+									<a href="#"><img src="img/avatars/big/4.jpg" /></a>
+								</div>
+							</div>
+						</div>
+						<div class="media__text">Гора Фицрой находится в территории национального парка Лос‑Гласьярес, на границе между<br>Аргентиной и Чили. Окрестности вершины опутаны множеством трекинговых троп, популярных среди туристов. Самый ближайший населенный пункт — Эль‑Чалтен, откуда
+							ходит автобус из Эль‑Калафате.<br>Самый ближайший населенный пункт — Эль‑Чалтен, откуда ходит автобус из Эль‑Калафате.</div>
+						<div class="media-controls">
+							<ul class="media-controls__list">
+								<li class="media-controls__list-item"><a href="#">Удалить</a></li>
+								<li class="media-controls__list-item"><a href="#">Перенести</a></li>
+								<li class="media-controls__list-item"><a href="#">Поделиться</a></li>
+							</ul>
+						</div>
+						<div class="media__show">
+							<div class="media__video">
+								<a href="#"><img src="img/photos/big/3.jpg" /></a>
+							</div><a class="media__previous">Предыдущее</a><a class="media__next">Следующее</a></div>
+						<div class="media__other">
+							<div class="media__date"><a href="#">сегодня в 9:58</a></div>
+							<div class="media__comment"><a href="#">Комментировать</a></div>
+							<div class="media__like">
+								<div class="like"><a href="#">мне нравится</a></div>
+							</div>
+						</div>
+						<div class="media__comments">
+							<div class="comments">
+								<div class="comments__show-all"><a href="#">Показать все 15 комментариев</a></div>
+								<ul class="comments-list">
+									<li class="comments-list-item">
+										<div class="comments-list-item__avatar">
+											<div class="avatar avatar_size_small avatar_status_offline">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/small/2.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="comments-list-item__info">
+											<div class="comments-list-item__name"><a href="#">Оксана Макарова</a><span class="comments-list-item__reply-to"></span></div>
+											<div class="comments-list-item__lang">
+												<div class="comments-list-item__flag">
+													<div class="flag flag_size_small">
+														<a href="#"><img src="img/flags/small/2.png" /></a>
+													</div>
+												</div>
+												<div class="comments-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+											</div>
+											<div class="comments-list-item__text">Боже, какая красота! Гора Фицрой- прекраснейшая!! Спасибо за радость от просмотра фото).<br>АААААА!!!! Классс!!!! Невероятно красивая природа! Потрясающие места и виды!</div>
+											<div class="comments-list-item__other">
+												<div class="comments-list-item__date"><a href="#">25 минут назад</a></div>
+												<div class="comments-list-item__reply"><a href="#">Ответить</a></div>
+												<div class="comments-list-item__like">
+													<div class="like"><a href="#">мне нравится</a></div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="comments-list-item">
+										<div class="comments-list-item__avatar">
+											<div class="avatar avatar_size_small avatar_status_online">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/small/3.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="comments-list-item__info">
+											<div class="comments-list-item__name"><a href="#">София Бандарчук</a><span class="comments-list-item__reply-to">ответила Оксане Макаровой</span></div>
+											<div class="comments-list-item__lang">
+												<div class="comments-list-item__flag">
+													<div class="flag flag_size_small">
+														<a href="#"><img src="img/flags/small/3.png" /></a>
+													</div>
+												</div>
+												<div class="comments-list-item__lang-info">Аргентина, Буэнос-Айрес, испанский язык.</div>
+											</div>
+											<div class="comments-list-item__text">А я там была =P<br>По природе у меня возникли некоторые ассоциации с Новой Зеландией. Хотя и сложно сравнивать!</div>
+											<div class="comments-list-item__other">
+												<div class="comments-list-item__date"><a href="#">25 минут назад</a></div>
+												<div class="comments-list-item__reply"><a href="#">Ответить</a></div>
+												<div class="comments-list-item__like">
+													<div class="like like_active"><a href="#">мне нравится</a></div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<div class="comments-new-item">
+									<form class="comments-new-item__form"><textarea class="comments-new-item__textarea" placeholder="Комментировать..."></textarea>
+										<div class="comments-new-item__controls"><button class="comments-new-item__button" type="submit">Отправить</button></div>
+										<div class="comments-new-item__avatar">
+											<div class="avatar avatar_size_small">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/small/1.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="comments-new-item-attach">
+											<ul class="comments-new-item-attach__list">
+												<li class="comments-new-item-attach__list-item comments-new-item-attach__list-item_type_video tooltip" title="Прикрепить видео"><a href="#">Прикрепить видео</a></li>
+												<li class="comments-new-item-attach__list-item comments-new-item-attach__list-item_type_photo tooltip" title="Прикрепить фото"><a href="#">Прикрепить фото</a></li>
+											</ul>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="thumb">
+				<h3 class="popup__title">Выбор миниатюры<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="thumb">
+						<div class="thumb__text">Осталось выбрать область для маленьких фотографий.<br>Выбранная миниатюра будет использоваться в новостях, личных сообщениях и комментариях.</div>
+						<div class="thumb__images">
+							<div class="thumb__image">
+								<a href="#"><img src="img/avatars/full/1.jpg" /></a>
+							</div>
+							<div class="thumb__avatar">
+								<div class="avatar avatar_size_big">
+									<div class="avatar__image">
+										<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="thumb__controls"><button class="thumb__button" type="submit">Сохранить изменения</button></div>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="group-users">
+				<div class="popup__title">
+					<div class="popup-switcher">
+						<ul class="popup-switcher__list">
+							<li class="popup-switcher__list-item popup-switcher__list-item_active"><a href="#">Участники группы (1 897 005)</a></li>
+							<li class="popup-switcher__list-item"><a href="#">Друзья в сообществе (4)</a></li>
+							<li class="popup-switcher__list-item"><a href="#">Поиск по участниками</a></li>
+						</ul>
+					</div><a class="popup__close">Закрыть</a></div>
+				<div class="popup__content">
+					<div class="group-users">
+						<ul class="group-users-list">
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_offline">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_offline">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_offline">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_offline">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_offline">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_offline">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_offline">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="group-friends">
+				<div class="popup__title">
+					<div class="popup-switcher">
+						<ul class="popup-switcher__list">
+							<li class="popup-switcher__list-item"><a href="#">Участники группы (1 897 005)</a></li>
+							<li class="popup-switcher__list-item popup-switcher__list-item_active"><a href="#">Друзья в сообществе (4)</a></li>
+							<li class="popup-switcher__list-item"><a href="#">Поиск по участниками</a></li>
+						</ul>
+					</div><a class="popup__close">Закрыть</a></div>
+				<div class="popup__content">
+					<div class="group-users">
+						<ul class="group-users-list">
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_offline">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+							</li>
+							<li class="group-users-list-item">
+								<div class="group-users-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="group-users-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="group-exit">
+				<h3 class="popup__title">Вы собираетесь выйти из группы?<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="group-exit"><a href="#">Да</a><a href="#">Отмена</a></div>
+				</div>
+			</div>
+			<div class="popup" id="photo-upload">
+				<h3 class="popup__title">Загрузка новой фотографии<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="media-upload"><input class="media-upload__file" type="file" />
+						<div class="media-upload__text">Друзьям будет проще узнать Вас, если Вы загрузите свою настоящую фотографию. Вы можете загрузить изображение в формате JPG, GIF или PNG.<br><br>Если у Вас возникают проблемы с загрузкой, попробуйте выбрать фотографию меньшего размера.</div>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="group-complaint">
+				<h3 class="popup__title">Пожаловаться на группу: <strong>Центр изучения иностранных языков</strong><a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="complaint">
+						<div class="complaint__layout">
+							<div class="complaint__layout-left">
+								<div class="complaint__title">Вы собираетесь пожаловаться на эту группу:</div>
+								<div class="complaint-group">
+									<div class="complaint-group__avatar">
+										<div class="avatar avatar_size_big">
+											<div class="avatar__image">
+												<a href="#"><img src="img/avatars/big/6.jpg" /></a>
+											</div>
+										</div>
+									</div>
+									<div class="complaint-group__name"><a href="#">Центр изучения иностранных языков</a></div>
+									<div class="complaint-group__profile"><a href="#">группа</a></div>
+								</div>
+							</div>
+							<div class="complaint__layout-right">
+								<div class="complaint-form">
+									<div class="complaint-form__row"><label class="complaint-form__label">Тема жалобы:</label>
+										<div class="complaint-form__field"><input class="complaint-form__input" type="text" value="Тема" /></div>
+									</div>
+									<div class="complaint-form__row"><label class="complaint-form__label">Материал на который вы жалуетесь:</label>
+										<div class="complaint-form__link"><a href="#">Автоматически генерируемая ссылка на материал</a></div>
+									</div>
+									<div class="complaint-form__row">
+										<div class="complaint-form__field"><textarea class="complaint-form__textarea">Укажите причину</textarea></div>
+									</div>
+									<div class="complaint-form__controls"><button class="complaint-form__button" type="submit">Отправить жалобу</button></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="user-complaint">
+				<h3 class="popup__title">Пожаловаться на пользорвателя: <strong>Christian Bale</strong><a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="complaint">
+						<div class="complaint__layout">
+							<div class="complaint__layout-left">
+								<div class="complaint__title">Вы собираетесь пожаловаться на этого пользователя:</div>
+								<div class="complaint-user">
+									<div class="complaint-user__flag">
+										<div class="flag flag_size_small">
+											<a href="#"><img src="img/flags/small/1.png" /></a>
+										</div>
+									</div>
+									<div class="complaint-user__avatar">
+										<div class="avatar avatar_size_big avatar_status_online">
+											<div class="avatar__image">
+												<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+											</div>
+										</div>
+									</div>
+									<div class="complaint-user__name"><a href="#">Christian<br>Bale</a></div>
+									<div class="complaint-user__status">Online</div>
+									<div class="complaint-user__profile"><a href="#">профиль</a></div>
+								</div>
+							</div>
+							<div class="complaint__layout-right">
+								<div class="complaint-form">
+									<div class="complaint-form__row"><label class="complaint-form__label">Тема жалобы:</label>
+										<div class="complaint-form__field"><input class="complaint-form__input" type="text" value="Тема" /></div>
+									</div>
+									<div class="complaint-form__row"><label class="complaint-form__label">Материал на который вы жалуетесь:</label>
+										<div class="complaint-form__link"><a href="#">Автоматически генерируемая ссылка на материал</a></div>
+									</div>
+									<div class="complaint-form__row">
+										<div class="complaint-form__field"><textarea class="complaint-form__textarea">Укажите причину</textarea></div>
+									</div>
+									<div class="complaint-form__controls"><button class="complaint-form__button" type="submit">Отправить жалобу</button></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="confirm-delete-user">
+				<h3 class="popup__title">Удалить из беседы Дарью Чехову?<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="confirm-delete-user">
+						<div class="confirm-delete-user__text">Вы уверены, что хотите исключить Дарью Чехову из беседы? Это действие нельзя будет отменить.</div>
+						<div class="confirm-delete-user__controls"><a href="#">Отмена</a><a href="#">Удалить</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="confirm-black-list">
+				<h3 class="popup__title"><strong>Григорий Осипов</strong> добавлен в черный список<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="confirm-black-list">
+						<div class="confirm-black-list__text">Всех пользователей добавленных в черный список можно посмотреть на вкладке <a href="#">Настройки</a><br>Также можно настроить отключение данного уведомления</div>
+						<div class="confirm-black-list__controls"><a href="#">Продолжить</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="delete-user">
+				<div class="popup__title">Удалить собеседника<a class="popup__close">Закрыть</a></div>
+				<div class="popup__content">
+					<div class="delete-user">
+						<ul class="delete-user-list">
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_offline">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_offline">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_offline">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="photo-new">
+				<h3 class="popup__title">Новая фотография<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="media-upload"><input class="media-upload__file" type="file" />
+						<div class="media-upload__controls"><a href="#">Прикрепить</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="video-new">
+				<h3 class="popup__title">Новое видео<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="media-upload"><input class="media-upload__input" type="text" placeholder="https://www.youtube.com/" />
+						<div class="media-upload__text">Вы можете указать ссылку на страницу видеозаписи на таких сайтах, как Youtube, Rutube, Vimeo и другие.</div>
+						<div class="media-upload__controls"><a href="#">Прикрепить</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="video-attach">
+				<h3 class="popup__title">Прикрепить видеозапись<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="video-attach">
+						<div class="last-videos-search">
+							<div class="last-videos-search__form">
+								<div class="last-videos-search__field"><input class="last-videos-search__input" type="text" placeholder="Поиск по видеозаписям" /></div>
+								<div class="last-videos-search__controls"><button class="last-videos-search__button" type="submit">Найти</button></div>
+							</div>
+						</div>
+						<div class="video-albums">
+							<ul class="video-albums-list">
+								<li class="video-albums-list-item">
+									<div class="video-albums-list-item__title"><a href="#">Название видеоальбома<span class="video-albums-list-item__count">(7)</span></a></div>
+									<div class="video-albums-list-item__videos">
+										<ul class="video-albums-last-list">
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/2.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/3.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="video-albums-list-item">
+									<div class="video-albums-list-item__title"><a href="#">Название видеоальбома<span class="video-albums-list-item__count">(3)</span></a></div>
+									<div class="video-albums-list-item__videos">
+										<ul class="video-albums-last-list">
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/2.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/3.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<div href="#">
+													<div src="img/photos/medium/.jpg"></div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="video-albums-list-item">
+									<div class="video-albums-list-item__title"><a href="#">Название видеоальбома<span class="video-albums-list-item__count">(1)</span></a></div>
+									<div class="video-albums-list-item__videos">
+										<ul class="video-albums-last-list">
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<div href="#">
+													<div src="img/photos/medium/.jpg"></div>
+												</div>
+											</li>
+											<li class="video-albums-last-list-item">
+												<div href="#">
+													<div src="img/photos/medium/.jpg"></div>
+												</div>
+											</li>
+											<li class="video-albums-last-list-item">
+												<div href="#">
+													<div src="img/photos/medium/.jpg"></div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="video-albums-list-item">
+									<div class="video-albums-list-item__title"><a href="#">Название видеоальбома<span class="video-albums-list-item__count">(48)</span></a></div>
+									<div class="video-albums-list-item__videos">
+										<ul class="video-albums-last-list">
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/2.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/3.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+							<div class="video-albums__show-all"><a href="#">Показать все 11 видеоальбомов</a></div>
+						</div>
+						<ul class="last-videos-list">
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/1.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/2.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/3.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/1.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/2.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/3.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/1.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/2.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/3.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/1.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/2.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/3.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="photo-attach">
+				<h3 class="popup__title">Прикрепить фотографию<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="photo-attach">
+						<div class="photo-albums">
+							<ul class="photo-albums-list">
+								<li class="photo-albums-list-item">
+									<div class="photo-albums-list-item__title"><a href="#">My photos<span class="photo-albums-list-item__count">(7)</span></a></div>
+									<div class="photo-albums-list-item__image">
+										<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+									</div>
+								</li>
+								<li class="photo-albums-list-item">
+									<div class="photo-albums-list-item__title"><a href="#">My photos<span class="photo-albums-list-item__count">(457)</span></a></div>
+									<div class="photo-albums-list-item__image">
+										<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+									</div>
+								</li>
+								<li class="photo-albums-list-item">
+									<div class="photo-albums-list-item__title"><a href="#">My photos<span class="photo-albums-list-item__count">(21)</span></a></div>
+									<div class="photo-albums-list-item__image">
+										<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+									</div>
+								</li>
+								<li class="photo-albums-list-item">
+									<div class="photo-albums-list-item__title"><a href="#">My photos<span class="photo-albums-list-item__count">(7)</span></a></div>
+									<div class="photo-albums-list-item__image">
+										<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+									</div>
+								</li>
+							</ul>
+							<div class="photo-albums__show-all"><a href="#">Показать все 15 альбомов</a></div>
+						</div>
+						<ul class="last-photos-list">
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
+		<script src="bower_components/jquery.form-styler/jquery.formstyler.min.js"></script>
+		<script src="bower_components/jquery.ztabs/jquery.ztabs.js"></script>
+		<script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+		<script src="bower_components/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+		<script src="bower_components/jquery-dropdown/jquery.dropdown.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+
+</html>

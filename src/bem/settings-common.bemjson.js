@@ -93,10 +93,10 @@
 						},
 						{
 							block: 'settings',
+							mods: {'type': 'grid'},
 							content: [
 								{
-									block: 'settings-personal',
-									mods: {'type': 'grid'},
+									elem: 'content',
 									content: [
 										{
 											elem: 'block',
@@ -120,12 +120,10 @@
 														{
 															elem: 'list-item',
 															tag: 'dd',
-															mods: {'type': 'short'},
 															content: [
 																{
 																	elem: 'input',
 																	tag: 'input',
-																	mods: {'type': 'short'},
 																	attrs: {'type': 'password'}
 																}
 															]
@@ -139,12 +137,10 @@
 														{
 															elem: 'list-item',
 															tag: 'dd',
-															mods: {'type': 'short'},
 															content: [
 																{
 																	elem: 'input',
 																	tag: 'input',
-																	mods: {'type': 'short'},
 																	attrs: {'type': 'password'}
 																}
 															]
@@ -158,12 +154,10 @@
 														{
 															elem: 'list-item',
 															tag: 'dd',
-															mods: {'type': 'short'},
 															content: [
 																{
 																	elem: 'input',
 																	tag: 'input',
-																	mods: {'type': 'short'},
 																	attrs: {'type': 'password'}
 																}
 															]
@@ -206,7 +200,6 @@
 														{
 															elem: 'list-item',
 															tag: 'dd',
-															mods: {'type': 'short'},
 															content:
 																'+7 *** *** ** 33'
 														},
@@ -219,12 +212,10 @@
 														{
 															elem: 'list-item',
 															tag: 'dd',
-															mods: {'type': 'short'},
 															content: [
 																{
 																	elem: 'input',
 																	tag: 'input',
-																	mods: {'type': 'short'},
 																	attrs: {'type': 'text'}
 																}
 															]
@@ -267,7 +258,6 @@
 														{
 															elem: 'list-item',
 															tag: 'dd',
-															mods: {'type': 'short'},
 															content:
 																'grego********v@gmail.com'
 														},
@@ -280,12 +270,10 @@
 														{
 															elem: 'list-item',
 															tag: 'dd',
-															mods: {'type': 'short'},
 															content: [
 																{
 																	elem: 'input',
 																	tag: 'input',
-																	mods: {'type': 'short'},
 																	attrs: {'type': 'text'}
 																}
 															]
@@ -333,12 +321,10 @@
 														{
 															elem: 'list-item',
 															tag: 'dd',
-															mods: {'type': 'short'},
 															content: [
 																{
 																	elem: 'input',
 																	tag: 'input',
-																	mods: {'type': 'short'},
 																	attrs: {'type': 'text'}
 																}
 															]
@@ -366,6 +352,9 @@
 					]
 				}
 			]
+		},
+		{
+			block: 'template-other'
 		}
 	]
 });

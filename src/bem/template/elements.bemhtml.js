@@ -322,6 +322,47 @@ block('template-comments').replace()(function() {
 											size: 'small'
 										}
 									]
+								},
+								{
+									block: 'comments-new-item-attach',
+									content: [
+										{
+											elem: 'list',
+											tag: 'ul',
+											content: [
+												{
+													elem: 'list-item',
+													tag: 'li',
+													mods: {'type': 'video'},
+													mix: {block: 'tooltip'},
+													attrs: {'title': 'Прикрепить видео'},
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Прикрепить видео'
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													mods: {'type': 'photo'},
+													mix: {block: 'tooltip'},
+													attrs: {'title': 'Прикрепить фото'},
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Прикрепить фото'
+														}
+													]
+												}
+											]
+										}
+									]
 								}
 							]
 						}

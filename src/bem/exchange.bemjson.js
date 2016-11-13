@@ -816,6 +816,9 @@
 					]
 				}
 			]
+		},
+		{
+			block: 'template-other'
 		}
 	]
 });

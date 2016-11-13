@@ -263,6 +263,9 @@
 					]
 				}
 			]
+		},
+		{
+			block: 'template-other'
 		}
 	]
 });

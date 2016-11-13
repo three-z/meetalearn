@@ -770,6 +770,9 @@
 					]
 				}
 			]
+		},
+		{
+			block: 'template-other'
 		}
 	]
 });

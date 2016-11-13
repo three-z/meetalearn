@@ -1,0 +1,776 @@
+({
+	block: 'template-page',
+	content: [
+		{
+			block: 'template-header'
+		},
+		{
+			block: 'content',
+			content: [
+				{
+					elem: 'layout',
+					mix: {block: 'container'},
+					content: [
+						{
+							block: 'page-title',
+							tag: 'h1',
+							mods: {'type': 'top'},
+							content: [
+								'Сообщения'
+							]
+						},
+						{
+							block: 'filter-bottom',
+							mods: {'type': 'bottom'},
+							content: [
+								{
+									elem: 'layout',
+									content: [
+										{
+											elem: 'layout-switch',
+											content: [
+												{
+													block: 'filter-switcher',
+													content: [
+														{
+															elem: 'list',
+															tag: 'ul',
+															content: [
+																{
+																	elem: 'list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			tag: 'a',
+																			attrs: {'href': '#'},
+																			content:
+																				'Все сообщения'
+																		}
+																	]
+																},
+																{
+																	elem: 'list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			tag: 'a',
+																			attrs: {'href': '#'},
+																			content:
+																				'Диалоги'
+																		}
+																	]
+																},
+																{
+																	elem: 'list-item',
+																	tag: 'li',
+																	mods: {'active': true},
+																	content: [
+																		{
+																			tag: 'a',
+																			attrs: {'href': '#'},
+																			content:
+																				'Беседы'
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											elem: 'layout-center',
+											content: [
+												{
+													block: 'filter-search',
+													content: [
+														{
+															elem: 'form',
+															content: [
+																{
+																	elem: 'field',
+																	content: [
+																		{
+																			elem: 'input',
+																			tag: 'input',
+																			attrs: {'type': 'text', 'placeholder': 'Поиск'}
+																		}
+																	]
+																},
+																{
+																	elem: 'controls',
+																	content: [
+																		{
+																			elem: 'button',
+																			tag: 'button',
+																			attrs: {'type': 'submit'},
+																			content:
+																				'Найти'
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											elem: 'layout-right',
+											content: [
+												{
+													block: 'filter-options',
+													content: [
+														{
+															elem: 'field',
+															content: [
+																{
+																	elem: 'checkbox-label',
+																	tag: 'label',
+																	content: [
+																		{
+																			elem: 'checkbox',
+																			tag: 'input',
+																			attrs: {'type': 'checkbox', 'name': 'filter-online', 'value': 'yes', 'checked': ''}
+																		},
+																		'Online'
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							block: 'messages',
+							content: [
+								{
+									block: 'messages-list',
+									tag: 'ul',
+									content: [
+										{
+											block: 'messages-list-item',
+											tag: 'li',
+											content: [
+												{
+													elem: 'avatars',
+													content: [
+														{
+															elem: 'avatars-list',
+															tag: 'ul',
+															content: [
+																{
+																	elem: 'avatars-list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			elem: 'avatar',
+																			content: [
+																				{
+																					block: 'template-avatar',
+																					avatar: '1',
+																					size: 'tiny',
+																					status: 'online'
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	elem: 'avatars-list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			elem: 'avatar',
+																			content: [
+																				{
+																					block: 'template-avatar',
+																					avatar: '2',
+																					size: 'tiny',
+																					status: 'online'
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	elem: 'avatars-list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			elem: 'avatar',
+																			content: [
+																				{
+																					block: 'template-avatar',
+																					avatar: '3',
+																					size: 'tiny',
+																					status: 'online'
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	elem: 'avatars-list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			elem: 'avatar-add',
+																			content: [
+																				{
+																					tag: 'a',
+																					attrs: {'href': '#'},
+																					content:
+																						'Добавить'
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													elem: 'info',
+													content: [
+														{
+															elem: 'name',
+															content: [
+																{
+																	tag: 'a',
+																	attrs: {'href': '#'},
+																	content:
+																		'Отдых на Байкале'
+																}
+															]
+														},
+														{
+															elem: 'count',
+															content:
+																'9 участников:'
+														},
+														{
+															elem: 'users',
+															content:
+																'Никита Орлов, Валерий Калашников, Ирина Смелова, Зоя Прохорова, Сергей Капустин, Мария Шарикова, + 3 пользователя'
+														},
+														{
+															elem: 'text',
+															content: [
+																{
+																	tag: 'a',
+																	attrs: {'href': '#'},
+																	content:
+																		'Никита Орлов: '
+																},
+																'Да, с хлопьями согласен. Но гречка любая очень быстро варится, ее вообще можно холодной водой залить и все, и через пару часов она будет готова.'
+															]
+														},
+														{
+															block: 'messages-list-item-controls',
+															content: [
+																{
+																	elem: 'list',
+																	tag: 'ul',
+																	content: [
+																		{
+																			elem: 'list-item',
+																			tag: 'li',
+																			mods: {'type': 'date'},
+																			content:
+																				'21 ноя 2015'
+																		},
+																		{
+																			elem: 'list-item',
+																			tag: 'li',
+																			mods: {'type': 'delete'},
+																			mix: {block: 'tooltip'},
+																			attrs: {'title': 'Удалить'},
+																			content: [
+																				{
+																					tag: 'a',
+																					attrs: {'href': '#'},
+																					content:
+																						'Удалить'
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											block: 'messages-list-item',
+											tag: 'li',
+											content: [
+												{
+													elem: 'avatars',
+													content: [
+														{
+															elem: 'avatars-list',
+															tag: 'ul',
+															content: [
+																{
+																	elem: 'avatars-list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			elem: 'avatar',
+																			content: [
+																				{
+																					block: 'template-avatar',
+																					avatar: '1',
+																					size: 'tiny',
+																					status: 'online'
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	elem: 'avatars-list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			elem: 'avatar',
+																			content: [
+																				{
+																					block: 'template-avatar',
+																					avatar: '2',
+																					size: 'tiny',
+																					status: 'online'
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	elem: 'avatars-list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			elem: 'avatar-add',
+																			content: [
+																				{
+																					tag: 'a',
+																					attrs: {'href': '#'},
+																					content:
+																						'Добавить'
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													elem: 'info',
+													content: [
+														{
+															elem: 'name',
+															content: [
+																{
+																	tag: 'a',
+																	attrs: {'href': '#'},
+																	content:
+																		'Испаноязычный форум'
+																}
+															]
+														},
+														{
+															elem: 'count',
+															content:
+																'9 участников:'
+														},
+														{
+															elem: 'users',
+															content:
+																'Никита Орлов, Валерий Калашников, Ирина Смелова, Зоя Прохорова, Сергей Капустин, Мария Шарикова, + 3 пользователя'
+														},
+														{
+															elem: 'text',
+															content: [
+																{
+																	tag: 'a',
+																	attrs: {'href': '#'},
+																	content:
+																		'Никита Орлов: '
+																},
+																'Да, с хлопьями согласен. Но гречка любая очень быстро варится, ее вообще можно холодной водой залить и все, и через пару часов она будет готова.'
+															]
+														},
+														{
+															block: 'messages-list-item-controls',
+															content: [
+																{
+																	elem: 'list',
+																	tag: 'ul',
+																	content: [
+																		{
+																			elem: 'list-item',
+																			tag: 'li',
+																			mods: {'type': 'date'},
+																			content:
+																				'21 ноя 2015'
+																		},
+																		{
+																			elem: 'list-item',
+																			tag: 'li',
+																			mods: {'type': 'delete'},
+																			mix: {block: 'tooltip'},
+																			attrs: {'title': 'Удалить'},
+																			content: [
+																				{
+																					tag: 'a',
+																					attrs: {'href': '#'},
+																					content:
+																						'Удалить'
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											block: 'messages-list-item',
+											tag: 'li',
+											content: [
+												{
+													elem: 'avatars',
+													content: [
+														{
+															elem: 'avatars-list',
+															tag: 'ul',
+															content: [
+																{
+																	elem: 'avatars-list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			elem: 'avatar',
+																			content: [
+																				{
+																					block: 'template-avatar',
+																					avatar: '1',
+																					size: 'tiny',
+																					status: 'online'
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	elem: 'avatars-list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			elem: 'avatar',
+																			content: [
+																				{
+																					block: 'template-avatar',
+																					avatar: '2',
+																					size: 'tiny',
+																					status: 'online'
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	elem: 'avatars-list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			elem: 'avatar',
+																			content: [
+																				{
+																					block: 'template-avatar',
+																					avatar: '3',
+																					size: 'tiny',
+																					status: 'online'
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	elem: 'avatars-list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			elem: 'avatar-add',
+																			content: [
+																				{
+																					tag: 'a',
+																					attrs: {'href': '#'},
+																					content:
+																						'Добавить'
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													elem: 'info',
+													content: [
+														{
+															elem: 'name',
+															content: [
+																{
+																	tag: 'a',
+																	attrs: {'href': '#'},
+																	content:
+																		'Отдых на Байкале'
+																}
+															]
+														},
+														{
+															elem: 'count',
+															content:
+																'9 участников:'
+														},
+														{
+															elem: 'users',
+															content:
+																'Никита Орлов, Валерий Калашников, Ирина Смелова, Зоя Прохорова, Сергей Капустин, Мария Шарикова, + 3 пользователя'
+														},
+														{
+															elem: 'text',
+															content: [
+																{
+																	tag: 'a',
+																	attrs: {'href': '#'},
+																	content:
+																		'Никита Орлов: '
+																},
+																'Да, с хлопьями согласен. Но гречка любая очень быстро варится, ее вообще можно холодной водой залить и все, и через пару часов она будет готова.'
+															]
+														},
+														{
+															block: 'messages-list-item-controls',
+															content: [
+																{
+																	elem: 'list',
+																	tag: 'ul',
+																	content: [
+																		{
+																			elem: 'list-item',
+																			tag: 'li',
+																			mods: {'type': 'date'},
+																			content:
+																				'21 ноя 2015'
+																		},
+																		{
+																			elem: 'list-item',
+																			tag: 'li',
+																			mods: {'type': 'delete'},
+																			mix: {block: 'tooltip'},
+																			attrs: {'title': 'Удалить'},
+																			content: [
+																				{
+																					tag: 'a',
+																					attrs: {'href': '#'},
+																					content:
+																						'Удалить'
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											block: 'messages-list-item',
+											tag: 'li',
+											content: [
+												{
+													elem: 'avatars',
+													content: [
+														{
+															elem: 'avatars-list',
+															tag: 'ul',
+															content: [
+																{
+																	elem: 'avatars-list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			elem: 'avatar',
+																			content: [
+																				{
+																					block: 'template-avatar',
+																					avatar: '1',
+																					size: 'tiny',
+																					status: 'online'
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	elem: 'avatars-list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			elem: 'avatar',
+																			content: [
+																				{
+																					block: 'template-avatar',
+																					avatar: '2',
+																					size: 'tiny',
+																					status: 'online'
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	elem: 'avatars-list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			elem: 'avatar',
+																			content: [
+																				{
+																					block: 'template-avatar',
+																					avatar: '3',
+																					size: 'tiny',
+																					status: 'online'
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	elem: 'avatars-list-item',
+																	tag: 'li',
+																	content: [
+																		{
+																			elem: 'avatar-add',
+																			content: [
+																				{
+																					tag: 'a',
+																					attrs: {'href': '#'},
+																					content:
+																						'Добавить'
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													elem: 'info',
+													content: [
+														{
+															elem: 'name',
+															content: [
+																{
+																	tag: 'a',
+																	attrs: {'href': '#'},
+																	content:
+																		'Отдых на Байкале'
+																}
+															]
+														},
+														{
+															elem: 'count',
+															content:
+																'9 участников:'
+														},
+														{
+															elem: 'users',
+															content:
+																'Никита Орлов, Валерий Калашников, Ирина Смелова, Зоя Прохорова, Сергей Капустин, Мария Шарикова, + 3 пользователя'
+														},
+														{
+															elem: 'text',
+															content: [
+																{
+																	tag: 'a',
+																	attrs: {'href': '#'},
+																	content:
+																		'Никита Орлов: '
+																},
+																'Да, с хлопьями согласен. Но гречка любая очень быстро варится, ее вообще можно холодной водой залить и все, и через пару часов она будет готова.'
+															]
+														},
+														{
+															block: 'messages-list-item-controls',
+															content: [
+																{
+																	elem: 'list',
+																	tag: 'ul',
+																	content: [
+																		{
+																			elem: 'list-item',
+																			tag: 'li',
+																			mods: {'type': 'date'},
+																			content:
+																				'21 ноя 2015'
+																		},
+																		{
+																			elem: 'list-item',
+																			tag: 'li',
+																			mods: {'type': 'delete'},
+																			mix: {block: 'tooltip'},
+																			attrs: {'title': 'Удалить'},
+																			content: [
+																				{
+																					tag: 'a',
+																					attrs: {'href': '#'},
+																					content:
+																						'Удалить'
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			block: 'template-other'
+		}
+	]
+});

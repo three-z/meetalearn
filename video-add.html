@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" />
 		<link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
 		<link rel="stylesheet" href="bower_components/jquery.form-styler/jquery.formstyler.css" />
 		<link rel="stylesheet" href="bower_components/fancybox/source/jquery.fancybox.css" />
@@ -12,22 +13,6 @@
 		<link rel="stylesheet" href="bower_components/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css" />
 		<link rel="stylesheet" href="bower_components/jquery-dropdown/jquery.dropdown.min.css" />
 		<link rel="stylesheet" href="css/app.css" />
-		<script src="bower_components/jquery/dist/jquery.min.js"></script>
-		<script src="bower_components/webfontloader/webfontloader.js"></script>
-		<script>
-			var activeCallback = $.Callbacks();
-			WebFontConfig = {
-				google:
-				{
-					families: ["Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic:cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"]
-				},
-				active: function()
-				{
-					activeCallback.fire();
-				}
-			};
-			WebFont.load(WebFontConfig);
-		</script>
 	</head>
 
 	<body>
@@ -49,8 +34,8 @@
 							</div>
 							<div class="header-profile"><a href="#"><span class="header-profile__avatar"><img src="img/avatars/mini/1.jpg"/></span><span class="header-profile__name">Григорий<br>Суворов</span></a></div>
 							<div class="header-settings">
-								<div class="header-settings__button"><a href="#" data-jq-dropdown="#jq-dropdown-1">Настройки</a></div>
-								<div class="jq-dropdown" id="jq-dropdown-1">
+								<div class="header-settings__button"><a href="#" data-jq-dropdown="#jq-dropdown-settings">Настройки</a></div>
+								<div class="jq-dropdown" id="jq-dropdown-settings">
 									<ul class="jq-dropdown-menu">
 										<li><a href="#">Настройки</a></li>
 										<li><a href="#">Помощь</a></li>
@@ -65,20 +50,18 @@
 				</div>
 				<div class="header-bottom">
 					<div class="header-bottom__layout container">
-						<div class="header-bottom__layout-left">
-							<div class="header-navigation">
-								<ul class="header-navigation__list">
-									<li class="header-navigation__list-item header-navigation__list-item_active"><a href="#">Главная</a></li>
-									<li class="header-navigation__list-item"><a href="#">Языковой обмен</a></li>
-									<li class="header-navigation__list-item"><a href="#">Профиль</a></li>
-									<li class="header-navigation__list-item"><a href="#">Мои новости</a></li>
-									<li class="header-navigation__list-item"><a href="#">Группы</a></li>
-									<li class="header-navigation__list-item"><a href="#">Друзья</a></li>
-									<li class="header-navigation__list-item"><a href="#">Сообщения</a></li>
-									<li class="header-navigation__list-item"><a href="#">Фотографии</a></li>
-									<li class="header-navigation__list-item"><a href="#">Видео</a></li>
-								</ul>
-							</div>
+						<div class="header-navigation">
+							<ul class="header-navigation__list">
+								<li class="header-navigation__list-item header-navigation__list-item_active"><a href="#">Главная</a></li>
+								<li class="header-navigation__list-item"><a href="#">Языковой обмен</a></li>
+								<li class="header-navigation__list-item"><a href="#">Профиль</a></li>
+								<li class="header-navigation__list-item"><a href="#">Мои новости</a></li>
+								<li class="header-navigation__list-item"><a href="#">Группы</a></li>
+								<li class="header-navigation__list-item"><a href="#">Друзья<span class="header-navigation__count">105</span></a></li>
+								<li class="header-navigation__list-item"><a href="#">Сообщения<span class="header-navigation__count">7</span></a></li>
+								<li class="header-navigation__list-item"><a href="#">Фотографии</a></li>
+								<li class="header-navigation__list-item"><a href="#">Видео</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -126,6 +109,229 @@
 					</ul>
 				</div>
 			</div>
+		</div>
+		<div class="go-up"><a href="#">Up</a></div>
+		<div class="fast-messages">
+			<div class="fast-messages-popup" id="fast-messages-inbox">
+				<div class="fast-messages-popup__title">Сообщения<a class="fast-messages-popup__close">Закрыть</a></div>
+				<div class="fast-messages-popup__content">
+					<div class="fast-messages-inbox">
+						<ul class="fast-messages-inbox-list">
+							<li class="fast-messages-inbox-list-item">
+								<div class="fast-messages-inbox-list-item__other">
+									<div class="fast-messages-inbox-list-item__avatar">
+										<div class="avatar avatar_size_tiny">
+											<div class="avatar__image">
+												<a href="#"><img src="img/avatars/tiny/1.jpg" /></a>
+											</div>
+										</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+								</div>
+								<div class="fast-messages-inbox-list-item__info">
+									<div class="fast-messages-inbox-list-item__name">Константин Барсуков</div>
+									<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.</a></div>
+								</div>
+							</li>
+							<li class="fast-messages-inbox-list-item">
+								<div class="fast-messages-inbox-list-item__other">
+									<div class="fast-messages-inbox-list-item__avatar">
+										<div class="avatar avatar_size_tiny">
+											<div class="avatar__image">
+												<a href="#"><img src="img/avatars/tiny/2.jpg" /></a>
+											</div>
+										</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+								</div>
+								<div class="fast-messages-inbox-list-item__info">
+									<div class="fast-messages-inbox-list-item__name">Марина Соловьева</div>
+									<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during.</a></div>
+								</div>
+							</li>
+							<li class="fast-messages-inbox-list-item">
+								<div class="fast-messages-inbox-list-item__other">
+									<div class="fast-messages-inbox-list-item__avatar">
+										<div class="avatar avatar_size_tiny">
+											<div class="avatar__image">
+												<a href="#"><img src="img/avatars/tiny/1.jpg" /></a>
+											</div>
+										</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+								</div>
+								<div class="fast-messages-inbox-list-item__info">
+									<div class="fast-messages-inbox-list-item__name">Константин Барсуков</div>
+									<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.</a></div>
+								</div>
+							</li>
+							<li class="fast-messages-inbox-list-item">
+								<div class="fast-messages-inbox-list-item__other">
+									<div class="fast-messages-inbox-list-item__avatar">
+										<div class="avatar avatar_size_tiny">
+											<div class="avatar__image">
+												<a href="#"><img src="img/avatars/tiny/2.jpg" /></a>
+											</div>
+										</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+								</div>
+								<div class="fast-messages-inbox-list-item__info">
+									<div class="fast-messages-inbox-list-item__name">Марина Соловьева</div>
+									<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during.</a></div>
+								</div>
+							</li>
+							<li class="fast-messages-inbox-list-item">
+								<div class="fast-messages-inbox-list-item__other">
+									<div class="fast-messages-inbox-list-item__avatar">
+										<div class="avatar avatar_size_tiny">
+											<div class="avatar__image">
+												<a href="#"><img src="img/avatars/tiny/1.jpg" /></a>
+											</div>
+										</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+								</div>
+								<div class="fast-messages-inbox-list-item__info">
+									<div class="fast-messages-inbox-list-item__name">Константин Барсуков</div>
+									<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.</a></div>
+								</div>
+							</li>
+							<li class="fast-messages-inbox-list-item">
+								<div class="fast-messages-inbox-list-item__other">
+									<div class="fast-messages-inbox-list-item__avatar">
+										<div class="avatar avatar_size_tiny">
+											<div class="avatar__image">
+												<a href="#"><img src="img/avatars/tiny/2.jpg" /></a>
+											</div>
+										</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+								</div>
+								<div class="fast-messages-inbox-list-item__info">
+									<div class="fast-messages-inbox-list-item__name">Марина Соловьева</div>
+									<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during.</a></div>
+								</div>
+							</li>
+							<li class="fast-messages-inbox-list-item">
+								<div class="fast-messages-inbox-list-item__other">
+									<div class="fast-messages-inbox-list-item__avatar">
+										<div class="avatar avatar_size_tiny">
+											<div class="avatar__image">
+												<a href="#"><img src="img/avatars/tiny/1.jpg" /></a>
+											</div>
+										</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+								</div>
+								<div class="fast-messages-inbox-list-item__info">
+									<div class="fast-messages-inbox-list-item__name">Константин Барсуков</div>
+									<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.</a></div>
+								</div>
+							</li>
+							<li class="fast-messages-inbox-list-item">
+								<div class="fast-messages-inbox-list-item__other">
+									<div class="fast-messages-inbox-list-item__avatar">
+										<div class="avatar avatar_size_tiny">
+											<div class="avatar__image">
+												<a href="#"><img src="img/avatars/tiny/2.jpg" /></a>
+											</div>
+										</div>
+									</div>
+									<div class="fast-messages-inbox-list-item__date">16 июн<br>в 16:49</div>
+								</div>
+								<div class="fast-messages-inbox-list-item__info">
+									<div class="fast-messages-inbox-list-item__name">Марина Соловьева</div>
+									<div class="fast-messages-inbox-list-item__text"><a href="#">It was obvious that sleeping in a tent during.</a></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="fast-messages-popup" id="fast-messages-dialog">
+				<div class="fast-messages-popup__title">Константин Барсуков<a class="fast-messages-popup__close">Закрыть</a></div>
+				<div class="fast-messages-popup__content">
+					<div class="fast-messages-dialog">
+						<ul class="fast-messages-dialog-list">
+							<li class="fast-messages-dialog-list-item">
+								<div class="fast-messages-dialog-list-item__user">
+									<div class="fast-messages-dialog-list-item__other">
+										<div class="fast-messages-dialog-list-item__avatar">
+											<div class="avatar avatar_size_tiny">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/tiny/1.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="fast-messages-dialog-list-item__date">16 июн<br>в 16:49</div>
+									</div>
+									<div class="fast-messages-dialog-list-item__info">
+										<div class="fast-messages-dialog-list-item__name">Константин Барсуков</div>
+										<div class="fast-messages-dialog-list-item__text">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.</div>
+									</div>
+								</div>
+							</li>
+							<li class="fast-messages-dialog-list-item">
+								<div class="fast-messages-dialog-list-item__self">
+									<div class="fast-messages-dialog-list-item__self-text">Реализовать вложенность фотографий в папки.</div>
+									<div class="fast-messages-dialog-list-item__self-date">16 июн в 16:49</div>
+								</div>
+							</li>
+							<li class="fast-messages-dialog-list-item">
+								<div class="fast-messages-dialog-list-item__user">
+									<div class="fast-messages-dialog-list-item__other">
+										<div class="fast-messages-dialog-list-item__avatar">
+											<div class="avatar avatar_size_tiny">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/tiny/1.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="fast-messages-dialog-list-item__date">16 июн<br>в 16:49</div>
+									</div>
+									<div class="fast-messages-dialog-list-item__info">
+										<div class="fast-messages-dialog-list-item__name">Константин Барсуков</div>
+										<div class="fast-messages-dialog-list-item__text">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.</div>
+									</div>
+								</div>
+							</li>
+							<li class="fast-messages-dialog-list-item">
+								<div class="fast-messages-dialog-list-item__self">
+									<div class="fast-messages-dialog-list-item__self-text">Реализовать вложенность фотографий в папки.</div>
+									<div class="fast-messages-dialog-list-item__self-date">16 июн в 16:49</div>
+								</div>
+							</li>
+							<li class="fast-messages-dialog-list-item">
+								<div class="fast-messages-dialog-list-item__user">
+									<div class="fast-messages-dialog-list-item__other">
+										<div class="fast-messages-dialog-list-item__avatar">
+											<div class="avatar avatar_size_tiny">
+												<div class="avatar__image">
+													<a href="#"><img src="img/avatars/tiny/1.jpg" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="fast-messages-dialog-list-item__date">16 июн<br>в 16:49</div>
+									</div>
+									<div class="fast-messages-dialog-list-item__info">
+										<div class="fast-messages-dialog-list-item__name">Константин Барсуков</div>
+										<div class="fast-messages-dialog-list-item__text">It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.</div>
+									</div>
+								</div>
+							</li>
+							<li class="fast-messages-dialog-list-item">
+								<div class="fast-messages-dialog-list-item__self">
+									<div class="fast-messages-dialog-list-item__self-text">Реализовать вложенность фотографий в папки.</div>
+									<div class="fast-messages-dialog-list-item__self-date">16 июн в 16:49</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="fast-messages-dialog-new"><textarea class="fast-messages-dialog-new__textarea" placeholder="Сообщение..."></textarea></div>
+				</div>
+			</div><a class="fast-messages-count" href="#"><span class="fast-messages-count__notification">7</span></a></div>
+		<div class="push"></div>
 		</div>
 		<div class="footer">
 			<div class="footer__layout container">
@@ -249,6 +455,12 @@
 												</div>
 											</div>
 										</div>
+										<div class="comments-new-item-attach">
+											<ul class="comments-new-item-attach__list">
+												<li class="comments-new-item-attach__list-item comments-new-item-attach__list-item_type_video tooltip" title="Прикрепить видео"><a href="#">Прикрепить видео</a></li>
+												<li class="comments-new-item-attach__list-item comments-new-item-attach__list-item_type_photo tooltip" title="Прикрепить фото"><a href="#">Прикрепить фото</a></li>
+											</ul>
+										</div>
 									</form>
 								</div>
 							</div>
@@ -357,6 +569,12 @@
 													<a href="#"><img src="img/avatars/small/1.jpg" /></a>
 												</div>
 											</div>
+										</div>
+										<div class="comments-new-item-attach">
+											<ul class="comments-new-item-attach__list">
+												<li class="comments-new-item-attach__list-item comments-new-item-attach__list-item_type_video tooltip" title="Прикрепить видео"><a href="#">Прикрепить видео</a></li>
+												<li class="comments-new-item-attach__list-item comments-new-item-attach__list-item_type_photo tooltip" title="Прикрепить фото"><a href="#">Прикрепить фото</a></li>
+											</ul>
 										</div>
 									</form>
 								</div>
@@ -677,8 +895,8 @@
 			<div class="popup" id="photo-upload">
 				<h3 class="popup__title">Загрузка новой фотографии<a class="popup__close">Закрыть</a></h3>
 				<div class="popup__content">
-					<div class="photo-upload"><input class="photo-upload__file" type="file" />
-						<div class="photo-upload__text">Друзьям будет проще узнать Вас, если Вы загрузите свою настоящую фотографию. Вы можете загрузить изображение в формате JPG, GIF или PNG.<br><br>Если у Вас возникают проблемы с загрузкой, попробуйте выбрать фотографию меньшего размера.</div>
+					<div class="media-upload"><input class="media-upload__file" type="file" />
+						<div class="media-upload__text">Друзьям будет проще узнать Вас, если Вы загрузите свою настоящую фотографию. Вы можете загрузить изображение в формате JPG, GIF или PNG.<br><br>Если у Вас возникают проблемы с загрузкой, попробуйте выбрать фотографию меньшего размера.</div>
 					</div>
 				</div>
 			</div>
@@ -762,8 +980,452 @@
 					</div>
 				</div>
 			</div>
+			<div class="popup" id="confirm-delete-user">
+				<h3 class="popup__title">Удалить из беседы Дарью Чехову?<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="confirm-delete-user">
+						<div class="confirm-delete-user__text">Вы уверены, что хотите исключить Дарью Чехову из беседы? Это действие нельзя будет отменить.</div>
+						<div class="confirm-delete-user__controls"><a href="#">Отмена</a><a href="#">Удалить</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="confirm-black-list">
+				<h3 class="popup__title"><strong>Григорий Осипов</strong> добавлен в черный список<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="confirm-black-list">
+						<div class="confirm-black-list__text">Всех пользователей добавленных в черный список можно посмотреть на вкладке <a href="#">Настройки</a><br>Также можно настроить отключение данного уведомления</div>
+						<div class="confirm-black-list__controls"><a href="#">Продолжить</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="delete-user">
+				<div class="popup__title">Удалить собеседника<a class="popup__close">Закрыть</a></div>
+				<div class="popup__content">
+					<div class="delete-user">
+						<ul class="delete-user-list">
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_offline">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_offline">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/1.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Григорий<br>Суворов</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_online">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/2.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Анна<br>Богданова</a></div>
+							</li>
+							<li class="delete-user-list-item">
+								<div class="delete-user-list-item__avatar">
+									<div class="avatar avatar_size_big avatar_status_offline">
+										<div class="avatar__image">
+											<a href="#"><img src="img/avatars/big/3.jpg" /></a>
+										</div>
+									</div>
+								</div>
+								<div class="delete-user-list-item__name"><a href="#">Антон<br>Виноградов</a></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="photo-new">
+				<h3 class="popup__title">Новая фотография<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="media-upload"><input class="media-upload__file" type="file" />
+						<div class="media-upload__controls"><a href="#">Прикрепить</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="video-new">
+				<h3 class="popup__title">Новое видео<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="media-upload"><input class="media-upload__input" type="text" placeholder="https://www.youtube.com/" />
+						<div class="media-upload__text">Вы можете указать ссылку на страницу видеозаписи на таких сайтах, как Youtube, Rutube, Vimeo и другие.</div>
+						<div class="media-upload__controls"><a href="#">Прикрепить</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="video-attach">
+				<h3 class="popup__title">Прикрепить видеозапись<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="video-attach">
+						<div class="last-videos-search">
+							<div class="last-videos-search__form">
+								<div class="last-videos-search__field"><input class="last-videos-search__input" type="text" placeholder="Поиск по видеозаписям" /></div>
+								<div class="last-videos-search__controls"><button class="last-videos-search__button" type="submit">Найти</button></div>
+							</div>
+						</div>
+						<div class="video-albums">
+							<ul class="video-albums-list">
+								<li class="video-albums-list-item">
+									<div class="video-albums-list-item__title"><a href="#">Название видеоальбома<span class="video-albums-list-item__count">(7)</span></a></div>
+									<div class="video-albums-list-item__videos">
+										<ul class="video-albums-last-list">
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/2.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/3.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="video-albums-list-item">
+									<div class="video-albums-list-item__title"><a href="#">Название видеоальбома<span class="video-albums-list-item__count">(3)</span></a></div>
+									<div class="video-albums-list-item__videos">
+										<ul class="video-albums-last-list">
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/2.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/3.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<div href="#">
+													<div src="img/photos/medium/.jpg"></div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="video-albums-list-item">
+									<div class="video-albums-list-item__title"><a href="#">Название видеоальбома<span class="video-albums-list-item__count">(1)</span></a></div>
+									<div class="video-albums-list-item__videos">
+										<ul class="video-albums-last-list">
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<div href="#">
+													<div src="img/photos/medium/.jpg"></div>
+												</div>
+											</li>
+											<li class="video-albums-last-list-item">
+												<div href="#">
+													<div src="img/photos/medium/.jpg"></div>
+												</div>
+											</li>
+											<li class="video-albums-last-list-item">
+												<div href="#">
+													<div src="img/photos/medium/.jpg"></div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="video-albums-list-item">
+									<div class="video-albums-list-item__title"><a href="#">Название видеоальбома<span class="video-albums-list-item__count">(48)</span></a></div>
+									<div class="video-albums-list-item__videos">
+										<ul class="video-albums-last-list">
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/2.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/3.jpg" /></a>
+											</li>
+											<li class="video-albums-last-list-item">
+												<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+							<div class="video-albums__show-all"><a href="#">Показать все 11 видеоальбомов</a></div>
+						</div>
+						<ul class="last-videos-list">
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/1.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/2.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/3.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/1.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/2.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/3.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/1.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/2.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/3.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/1.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/2.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+							<li class="last-videos-list-item">
+								<div class="last-videos-list-item__video">
+									<a class="popup-open" href="#video"><img src="img/photos/big/3.jpg" /></a>
+								</div>
+								<div class="last-videos-list-item__name"><a href="#">NASA LIVE Video : Земля из космоса</a></div>
+								<div class="last-videos-list-item__album"><a href="#">Видеоальбом 1</a></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="popup" id="photo-attach">
+				<h3 class="popup__title">Прикрепить фотографию<a class="popup__close">Закрыть</a></h3>
+				<div class="popup__content">
+					<div class="photo-attach">
+						<div class="photo-albums">
+							<ul class="photo-albums-list">
+								<li class="photo-albums-list-item">
+									<div class="photo-albums-list-item__title"><a href="#">My photos<span class="photo-albums-list-item__count">(7)</span></a></div>
+									<div class="photo-albums-list-item__image">
+										<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+									</div>
+								</li>
+								<li class="photo-albums-list-item">
+									<div class="photo-albums-list-item__title"><a href="#">My photos<span class="photo-albums-list-item__count">(457)</span></a></div>
+									<div class="photo-albums-list-item__image">
+										<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+									</div>
+								</li>
+								<li class="photo-albums-list-item">
+									<div class="photo-albums-list-item__title"><a href="#">My photos<span class="photo-albums-list-item__count">(21)</span></a></div>
+									<div class="photo-albums-list-item__image">
+										<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+									</div>
+								</li>
+								<li class="photo-albums-list-item">
+									<div class="photo-albums-list-item__title"><a href="#">My photos<span class="photo-albums-list-item__count">(7)</span></a></div>
+									<div class="photo-albums-list-item__image">
+										<a href="#"><img src="img/photos/medium/1.jpg" /></a>
+									</div>
+								</li>
+							</ul>
+							<div class="photo-albums__show-all"><a href="#">Показать все 15 альбомов</a></div>
+						</div>
+						<ul class="last-photos-list">
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/2.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/3.jpg" /></a>
+							</li>
+							<li class="last-photos-list-item">
+								<a class="popup-open" href="#photo"><img src="img/photos/medium/1.jpg" /></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
-		</div>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
 		<script src="bower_components/jquery.form-styler/jquery.formstyler.min.js"></script>
 		<script src="bower_components/jquery.ztabs/jquery.ztabs.js"></script>

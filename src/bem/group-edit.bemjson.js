@@ -206,6 +206,9 @@
 					]
 				}
 			]
+		},
+		{
+			block: 'template-other'
 		}
 	]
 });

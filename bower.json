@@ -8,7 +8,6 @@
 	"dependencies": {
 		"jquery": "2.*",
 		"normalize.css": "*",
-		"webfontloader": "*",
 		"fancybox": "*",
 		"jquery.form-styler": "*",
 		"jquery.ztabs": "https://github.com/three-z/zTabs.git",

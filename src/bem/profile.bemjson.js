@@ -828,6 +828,7 @@
 												},
 												{
 													elem: 'block',
+													attrs: {'id': 'profile-personal-info'},
 													content: [
 														{
 															tag: 'h3',
@@ -1040,6 +1041,17 @@
 																	]
 																}
 															]
+														},
+														{
+															elem: 'edit',
+															content: [
+																{
+																	tag: 'a',
+																	attrs: {'href': '#'},
+																	content:
+																		'Редактировать'
+																}
+															]
 														}
 													]
 												},
@@ -1051,6 +1063,17 @@
 															attrs: {'href': '#'},
 															content:
 																'Скрыть подробную информацию'
+														}
+													]
+												},
+												{
+													elem: 'show',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Показать подробную информацию'
 														}
 													]
 												}
@@ -1155,6 +1178,9 @@
 					]
 				}
 			]
+		},
+		{
+			block: 'template-other'
 		}
 	]
 });

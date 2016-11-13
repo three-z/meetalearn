@@ -17,6 +17,10 @@ block('template-page').replace()(function() {
 						},
 						{
 							tag: 'link',
+							attrs: {'rel': 'stylesheet', 'href': '//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese'}
+						},
+						{
+							tag: 'link',
 							attrs: {'rel': 'stylesheet', 'href': 'bower_components/normalize.css/normalize.css'}
 						},
 						{
@@ -46,19 +50,6 @@ block('template-page').replace()(function() {
 						{
 							tag: 'link',
 							attrs: {'rel': 'stylesheet', 'href': 'css/app.css'}
-						},
-						{
-							tag: 'script',
-							attrs: {'src': 'bower_components/jquery/dist/jquery.min.js'}
-						},
-						{
-							tag: 'script',
-							attrs: {'src': 'bower_components/webfontloader/webfontloader.js'}
-						},
-						{
-							tag: 'script',
-							content:
-								'var activeCallback = $.Callbacks(); WebFontConfig = {google: {families: ["Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic:cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"]}, active: function(){activeCallback.fire();}}; WebFont.load(WebFontConfig);'
 						}
 					]
 				},
@@ -70,12 +61,20 @@ block('template-page').replace()(function() {
 							content: [
 								this.ctx.content,
 								{
-									block: 'template-footer'
-								},
-								{
-									block: 'template-popups'
+									block: 'push',
+									content: ''
 								}
 							]
+						},
+						{
+							block: 'template-footer'
+						},
+						{
+							block: 'template-popups'
+						},
+						{
+							tag: 'script',
+							attrs: {'src': 'bower_components/jquery/dist/jquery.min.js'}
 						},
 						{
 							tag: 'script',

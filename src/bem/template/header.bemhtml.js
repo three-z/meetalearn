@@ -90,14 +90,14 @@ block('template-header').replace()(function() {
 													content: [
 														{
 															tag: 'a',
-															attrs: {'href': '#', 'data-jq-dropdown': '#jq-dropdown-1'},
+															attrs: {'href': '#', 'data-jq-dropdown': '#jq-dropdown-settings'},
 															content: 'Настройки'
 														}
 													]
 												},
 												{
 													block: 'jq-dropdown',
-													attrs: {'id': 'jq-dropdown-1'},
+													attrs: {'id': 'jq-dropdown-settings'},
 													content: [
 														{
 															block: 'jq-dropdown-menu',
@@ -169,58 +169,134 @@ block('template-header').replace()(function() {
 							mix: {block: 'container'},
 							content: [
 								{
-									elem: 'layout-left',
+									block: 'header-navigation',
 									content: [
 										{
-											block: 'header-navigation',
+											elem: 'list',
+											tag: 'ul',
 											content: [
 												{
-													elem: 'list',
-													tag: 'ul',
+													elem: 'list-item',
+													tag: 'li',
+													mods: {'active': true},
 													content: [
 														{
-															title: 'Главная',
-															active: true
-														},
-														{
-															title: 'Языковой обмен'
-														},
-														{
-															title: 'Профиль'
-														},
-														{
-															title: 'Мои новости'
-														},
-														{
-															title: 'Группы'
-														},
-														{
-															title: 'Друзья'
-														},
-														{
-															title: 'Сообщения'
-														},
-														{
-															title: 'Фотографии'
-														},
-														{
-															title: 'Видео'
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Главная'
 														}
-													].map(function(item) {
-														return {
-															elem: 'list-item',
-															tag: 'li',
-															mods: {'active': item.active ? true : undefined},
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Языковой обмен'
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Профиль'
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Мои новости'
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Группы'
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
 															content: [
+																'Друзья',
 																{
-																	tag: 'a',
-																	attrs: {'href': '#'},
+																	elem: 'count',
+																	tag: 'span',
 																	content:
-																	item.title
+																		'105'
 																}
 															]
-														};
-													})
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content: [
+																'Сообщения',
+																{
+																	elem: 'count',
+																	tag: 'span',
+																	content:
+																		'7'
+																}
+															]
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Фотографии'
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Видео'
+														}
+													]
 												}
 											]
 										}

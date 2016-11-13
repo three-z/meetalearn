@@ -95,11 +95,11 @@
 							block: 'settings',
 							content: [
 								{
-									block: 'settings-personal',
+									elem: 'content',
 									content: [
 										{
 											elem: 'block',
-											mods: {'type': 'long-label'},
+											mods: {'type': 'medium-label'},
 											content: [
 												{
 													elem: 'title',
@@ -262,18 +262,18 @@
 																	]
 																}
 															]
-														},
+														}
+													]
+												},
+												{
+													elem: 'controls',
+													content: [
 														{
-															elem: 'controls',
-															content: [
-																{
-																	elem: 'button',
-																	tag: 'button',
-																	attrs: {'type': 'submit'},
-																	content:
-																		'Сохранить'
-																}
-															]
+															elem: 'button',
+															tag: 'button',
+															attrs: {'type': 'submit'},
+															content:
+																'Сохранить'
 														}
 													]
 												}
@@ -286,6 +286,9 @@
 					]
 				}
 			]
+		},
+		{
+			block: 'template-other'
 		}
 	]
 });

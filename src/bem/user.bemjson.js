@@ -102,10 +102,55 @@
 															tag: 'li',
 															content: [
 																{
+																	elem: 'friend-button',
 																	tag: 'a',
 																	attrs: {'href': '#'},
 																	content:
 																		'Добавить в друзья'
+																},
+																{
+																	elem: 'more-button',
+																	tag: 'a',
+																	attrs: {'href': '#', 'data-jq-dropdown': '#jq-dropdown-more'},
+																	content:
+																		'Еще...'
+																}
+															]
+														}
+													]
+												},
+												{
+													elem: 'dropdown',
+													content: [
+														{
+															block: 'jq-dropdown',
+															attrs: {'id': 'jq-dropdown-more'},
+															content: [
+																{
+																	block: 'jq-dropdown-menu',
+																	tag: 'ul',
+																	content: [
+																		{
+																			tag: 'li',
+																			content: [
+																				{
+																					tag: 'a',
+																					attrs: {'href': '#'},
+																					content: 'Пожаловаться модератору'
+																				}
+																			]
+																		},
+																		{
+																			tag: 'li',
+																			content: [
+																				{
+																					tag: 'a',
+																					attrs: {'href': '#'},
+																					content: 'Заблокировать'
+																				}
+																			]
+																		}
+																	]
 																}
 															]
 														}
@@ -840,6 +885,7 @@
 												},
 												{
 													elem: 'block',
+													attrs: {'id': 'profile-personal-info'},
 													content: [
 														{
 															tag: 'h3',
@@ -1065,6 +1111,17 @@
 																'Скрыть подробную информацию'
 														}
 													]
+												},
+												{
+													elem: 'show',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Показать подробную информацию'
+														}
+													]
 												}
 											]
 										},
@@ -1167,6 +1224,9 @@
 					]
 				}
 			]
+		},
+		{
+			block: 'template-other'
 		}
 	]
 });

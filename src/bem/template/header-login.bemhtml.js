@@ -78,26 +78,21 @@ block('template-header-login').replace()(function() {
 							mix: {block: 'container'},
 							content: [
 								{
-									elem: 'layout-right',
+									block: 'header-social',
 									content: [
 										{
-											block: 'header-restore',
-											content: [
-												{
-													tag: 'a',
-													attrs: {'href': '#'},
-													content:
-														'Восстановить пароль'
-												}
-											]
-										},
+											block: 'template-social-links'
+										}
+									]
+								},
+								{
+									block: 'header-restore',
+									content: [
 										{
-											block: 'header-social-login',
-											content: [
-												{
-													block: 'template-social-links'
-												}
-											]
+											tag: 'a',
+											attrs: {'href': '#'},
+											content:
+												'Восстановить пароль'
 										}
 									]
 								}

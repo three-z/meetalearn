@@ -45,6 +45,7 @@
 						},
 						{
 							block: 'filter-bottom',
+							mods: {'type': 'bottom'},
 							content: [
 								{
 									elem: 'layout',
@@ -727,6 +728,9 @@
 					]
 				}
 			]
+		},
+		{
+			block: 'template-other'
 		}
 	]
 });

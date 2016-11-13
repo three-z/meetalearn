@@ -322,6 +322,47 @@ block('template-comments').replace()(function() {
 											size: 'small'
 										}
 									]
+								},
+								{
+									block: 'comments-new-item-attach',
+									content: [
+										{
+											elem: 'list',
+											tag: 'ul',
+											content: [
+												{
+													elem: 'list-item',
+													tag: 'li',
+													mods: {'type': 'video'},
+													mix: {block: 'tooltip'},
+													attrs: {'title': 'Прикрепить видео'},
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Прикрепить видео'
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													mods: {'type': 'photo'},
+													mix: {block: 'tooltip'},
+													attrs: {'title': 'Прикрепить фото'},
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Прикрепить фото'
+														}
+													]
+												}
+											]
+										}
+									]
 								}
 							]
 						}
@@ -769,26 +810,21 @@ block('template-header-login').replace()(function() {
 							mix: {block: 'container'},
 							content: [
 								{
-									elem: 'layout-right',
+									block: 'header-social',
 									content: [
 										{
-											block: 'header-restore',
-											content: [
-												{
-													tag: 'a',
-													attrs: {'href': '#'},
-													content:
-														'Восстановить пароль'
-												}
-											]
-										},
+											block: 'template-social-links'
+										}
+									]
+								},
+								{
+									block: 'header-restore',
+									content: [
 										{
-											block: 'header-social-login',
-											content: [
-												{
-													block: 'template-social-links'
-												}
-											]
+											tag: 'a',
+											attrs: {'href': '#'},
+											content:
+												'Восстановить пароль'
 										}
 									]
 								}
@@ -892,14 +928,14 @@ block('template-header').replace()(function() {
 													content: [
 														{
 															tag: 'a',
-															attrs: {'href': '#', 'data-jq-dropdown': '#jq-dropdown-1'},
+															attrs: {'href': '#', 'data-jq-dropdown': '#jq-dropdown-settings'},
 															content: 'Настройки'
 														}
 													]
 												},
 												{
 													block: 'jq-dropdown',
-													attrs: {'id': 'jq-dropdown-1'},
+													attrs: {'id': 'jq-dropdown-settings'},
 													content: [
 														{
 															block: 'jq-dropdown-menu',
@@ -971,58 +1007,134 @@ block('template-header').replace()(function() {
 							mix: {block: 'container'},
 							content: [
 								{
-									elem: 'layout-left',
+									block: 'header-navigation',
 									content: [
 										{
-											block: 'header-navigation',
+											elem: 'list',
+											tag: 'ul',
 											content: [
 												{
-													elem: 'list',
-													tag: 'ul',
+													elem: 'list-item',
+													tag: 'li',
+													mods: {'active': true},
 													content: [
 														{
-															title: 'Главная',
-															active: true
-														},
-														{
-															title: 'Языковой обмен'
-														},
-														{
-															title: 'Профиль'
-														},
-														{
-															title: 'Мои новости'
-														},
-														{
-															title: 'Группы'
-														},
-														{
-															title: 'Друзья'
-														},
-														{
-															title: 'Сообщения'
-														},
-														{
-															title: 'Фотографии'
-														},
-														{
-															title: 'Видео'
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Главная'
 														}
-													].map(function(item) {
-														return {
-															elem: 'list-item',
-															tag: 'li',
-															mods: {'active': item.active ? true : undefined},
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Языковой обмен'
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Профиль'
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Мои новости'
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Группы'
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
 															content: [
+																'Друзья',
 																{
-																	tag: 'a',
-																	attrs: {'href': '#'},
+																	elem: 'count',
+																	tag: 'span',
 																	content:
-																	item.title
+																		'105'
 																}
 															]
-														};
-													})
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content: [
+																'Сообщения',
+																{
+																	elem: 'count',
+																	tag: 'span',
+																	content:
+																		'7'
+																}
+															]
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Фотографии'
+														}
+													]
+												},
+												{
+													elem: 'list-item',
+													tag: 'li',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Видео'
+														}
+													]
 												}
 											]
 										}
@@ -1035,6 +1147,446 @@ block('template-header').replace()(function() {
 			]
 		}
 	]
+});
+block('template-other').replace()(function() {
+	return [
+		{
+			block: 'go-up',
+			content: [
+				{
+					tag: 'a',
+					attrs: {'href': '#'},
+					content:
+						'Up'
+				}
+			]
+		},
+		{
+			block: 'fast-messages',
+			content: [
+				{
+					block: 'fast-messages-popup',
+					attrs: {'id': 'fast-messages-inbox'},
+					content: [
+						{
+							elem: 'title',
+							content: [
+								'Сообщения',
+								{
+									elem: 'close',
+									tag: 'a',
+									content:
+										'Закрыть'
+								}
+							]
+						},
+						{
+							elem: 'content',
+							content: [
+								{
+									block: 'fast-messages-inbox',
+									content: [
+										{
+											block: 'fast-messages-inbox-list',
+											tag: 'ul',
+											content: [
+												{
+													avatar: '1',
+													name:
+														'Константин Барсуков',
+													date:
+														'16 июн<br>' +
+														'в 16:49',
+													text:
+														'It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.'
+												},
+												{
+													avatar: '2',
+													name:
+														'Марина Соловьева',
+													date:
+														'16 июн<br>' +
+														'в 16:49',
+													text:
+														'It was obvious that sleeping in a tent during.'
+												},
+												{
+													avatar: '1',
+													name:
+														'Константин Барсуков',
+													date:
+													'16 июн<br>' +
+													'в 16:49',
+													text:
+														'It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.'
+												},
+												{
+													avatar: '2',
+													name:
+														'Марина Соловьева',
+													date:
+													'16 июн<br>' +
+													'в 16:49',
+													text:
+														'It was obvious that sleeping in a tent during.'
+												},
+												{
+													avatar: '1',
+													name:
+														'Константин Барсуков',
+													date:
+													'16 июн<br>' +
+													'в 16:49',
+													text:
+														'It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.'
+												},
+												{
+													avatar: '2',
+													name:
+														'Марина Соловьева',
+													date:
+													'16 июн<br>' +
+													'в 16:49',
+													text:
+														'It was obvious that sleeping in a tent during.'
+												},
+												{
+													avatar: '1',
+													name:
+														'Константин Барсуков',
+													date:
+													'16 июн<br>' +
+													'в 16:49',
+													text:
+														'It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.'
+												},
+												{
+													avatar: '2',
+													name:
+														'Марина Соловьева',
+													date:
+													'16 июн<br>' +
+													'в 16:49',
+													text:
+														'It was obvious that sleeping in a tent during.'
+												}
+											].map(function(item) {
+												return {
+													block: 'fast-messages-inbox-list-item',
+													tag: 'li',
+													content: [
+														{
+															elem: 'other',
+															content: [
+																{
+																	elem: 'avatar',
+																	content: [
+																		{
+																			block: 'template-avatar',
+																			avatar: item.avatar,
+																			size: 'tiny'
+																		}
+																	]
+																},
+																{
+																	elem: 'date',
+																	content: item.date
+																}
+															]
+														},
+														{
+															elem: 'info',
+															content: [
+																{
+																	elem: 'name',
+																	content: item.name
+																},
+																{
+																	elem: 'text',
+																	content: [
+																		{
+																			tag: 'a',
+																			attrs: {'href': '#'},
+																			content: item.text
+																		}
+																	]
+																}
+															]
+														}
+													]
+												};
+											})
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					block: 'fast-messages-popup',
+					attrs: {'id': 'fast-messages-dialog'},
+					content: [
+						{
+							elem: 'title',
+							content: [
+								'Константин Барсуков',
+								{
+									elem: 'close',
+									tag: 'a',
+									content:
+										'Закрыть'
+								}
+							]
+						},
+						{
+							elem: 'content',
+							content: [
+								{
+									block: 'fast-messages-dialog',
+									content: [
+										{
+											block: 'fast-messages-dialog-list',
+											tag: 'ul',
+											content: [
+												{
+													block: 'fast-messages-dialog-list-item',
+													tag: 'li',
+													content: [
+														{
+															elem: 'user',
+															content: [
+																{
+																	elem: 'other',
+																	content: [
+																		{
+																			elem: 'avatar',
+																			content: [
+																				{
+																					block: 'template-avatar',
+																					avatar: '1',
+																					size: 'tiny'
+																				}
+																			]
+																		},
+																		{
+																			elem: 'date',
+																			content:
+																				'16 июн<br>' +
+																				'в 16:49'
+																		}
+																	]
+																},
+																{
+																	elem: 'info',
+																	content: [
+																		{
+																			elem: 'name',
+																			content:
+																				'Константин Барсуков'
+																		},
+																		{
+																			elem: 'text',
+																			content:
+																				'It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.'
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													block: 'fast-messages-dialog-list-item',
+													tag: 'li',
+													content: [
+														{
+															elem: 'self',
+															content: [
+																{
+																	elem: 'self-text',
+																	content:
+																		'Реализовать вложенность фотографий в папки.'
+																},
+																{
+																	elem: 'self-date',
+																	content:
+																		'16 июн в 16:49'
+																}
+															]
+														}
+													]
+												},
+												{
+													block: 'fast-messages-dialog-list-item',
+													tag: 'li',
+													content: [
+														{
+															elem: 'user',
+															content: [
+																{
+																	elem: 'other',
+																	content: [
+																		{
+																			elem: 'avatar',
+																			content: [
+																				{
+																					block: 'template-avatar',
+																					avatar: '1',
+																					size: 'tiny'
+																				}
+																			]
+																		},
+																		{
+																			elem: 'date',
+																			content:
+																			'16 июн<br>' +
+																			'в 16:49'
+																		}
+																	]
+																},
+																{
+																	elem: 'info',
+																	content: [
+																		{
+																			elem: 'name',
+																			content:
+																				'Константин Барсуков'
+																		},
+																		{
+																			elem: 'text',
+																			content:
+																				'It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.'
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													block: 'fast-messages-dialog-list-item',
+													tag: 'li',
+													content: [
+														{
+															elem: 'self',
+															content: [
+																{
+																	elem: 'self-text',
+																	content:
+																		'Реализовать вложенность фотографий в папки.'
+																},
+																{
+																	elem: 'self-date',
+																	content:
+																		'16 июн в 16:49'
+																}
+															]
+														}
+													]
+												},
+												{
+													block: 'fast-messages-dialog-list-item',
+													tag: 'li',
+													content: [
+														{
+															elem: 'user',
+															content: [
+																{
+																	elem: 'other',
+																	content: [
+																		{
+																			elem: 'avatar',
+																			content: [
+																				{
+																					block: 'template-avatar',
+																					avatar: '1',
+																					size: 'tiny'
+																				}
+																			]
+																		},
+																		{
+																			elem: 'date',
+																			content:
+																			'16 июн<br>' +
+																			'в 16:49'
+																		}
+																	]
+																},
+																{
+																	elem: 'info',
+																	content: [
+																		{
+																			elem: 'name',
+																			content:
+																				'Константин Барсуков'
+																		},
+																		{
+																			elem: 'text',
+																			content:
+																				'It was obvious that sleeping in a tent during the winter is totally different compared to nice and warm summer nights.'
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													block: 'fast-messages-dialog-list-item',
+													tag: 'li',
+													content: [
+														{
+															elem: 'self',
+															content: [
+																{
+																	elem: 'self-text',
+																	content:
+																		'Реализовать вложенность фотографий в папки.'
+																},
+																{
+																	elem: 'self-date',
+																	content:
+																		'16 июн в 16:49'
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									block: 'fast-messages-dialog-new',
+									content: [
+										{
+											elem: 'textarea',
+											tag: 'textarea',
+											attrs: {'placeholder': 'Сообщение...'}
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					block: 'fast-messages-count',
+					tag: 'a',
+					attrs: {'href': '#'},
+					content: [
+						{
+							elem: 'notification',
+							tag: 'span',
+							content:
+								'7'
+						}
+					]
+				}
+			]
+		}
+	];
 });
 block('template-page').replace()(function() {
 	return [
@@ -1052,6 +1604,10 @@ block('template-page').replace()(function() {
 						{
 							tag: 'title',
 							content: ''
+						},
+						{
+							tag: 'link',
+							attrs: {'rel': 'stylesheet', 'href': '//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese'}
 						},
 						{
 							tag: 'link',
@@ -1084,19 +1640,6 @@ block('template-page').replace()(function() {
 						{
 							tag: 'link',
 							attrs: {'rel': 'stylesheet', 'href': 'css/app.css'}
-						},
-						{
-							tag: 'script',
-							attrs: {'src': 'bower_components/jquery/dist/jquery.min.js'}
-						},
-						{
-							tag: 'script',
-							attrs: {'src': 'bower_components/webfontloader/webfontloader.js'}
-						},
-						{
-							tag: 'script',
-							content:
-								'var activeCallback = $.Callbacks(); WebFontConfig = {google: {families: ["Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic:cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"]}, active: function(){activeCallback.fire();}}; WebFont.load(WebFontConfig);'
 						}
 					]
 				},
@@ -1108,12 +1651,20 @@ block('template-page').replace()(function() {
 							content: [
 								this.ctx.content,
 								{
-									block: 'template-footer'
-								},
-								{
-									block: 'template-popups'
+									block: 'push',
+									content: ''
 								}
 							]
+						},
+						{
+							block: 'template-footer'
+						},
+						{
+							block: 'template-popups'
+						},
+						{
+							tag: 'script',
+							attrs: {'src': 'bower_components/jquery/dist/jquery.min.js'}
 						},
 						{
 							tag: 'script',
@@ -2024,7 +2575,7 @@ block('template-popups').replace()(function() {
 							elem: 'content',
 							content: [
 								{
-									block: 'photo-upload',
+									block: 'media-upload',
 									content: [
 										{
 											elem: 'file',
@@ -2373,6 +2924,942 @@ block('template-popups').replace()(function() {
 													]
 												}
 											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					block: 'popup',
+					attrs: {'id': 'confirm-delete-user'},
+					content: [
+						{
+							elem: 'title',
+							tag: 'h3',
+							content: [
+								'Удалить из беседы Дарью Чехову?',
+								{
+									elem: 'close',
+									tag: 'a',
+									content:
+										'Закрыть'
+								}
+							]
+						},
+						{
+							elem: 'content',
+							content: [
+								{
+									block: 'confirm-delete-user',
+									content: [
+										{
+											elem: 'text',
+											content:
+												'Вы уверены, что хотите исключить Дарью Чехову из беседы? Это действие нельзя будет отменить.'
+										},
+										{
+											elem: 'controls',
+											content: [
+												{
+													tag: 'a',
+													attrs: {'href': '#'},
+													content:
+														'Отмена'
+												},
+												{
+													tag: 'a',
+													attrs: {'href': '#'},
+													content:
+														'Удалить'
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					block: 'popup',
+					attrs: {'id': 'confirm-black-list'},
+					content: [
+						{
+							elem: 'title',
+							tag: 'h3',
+							content: [
+								'<strong>Григорий Осипов</strong> добавлен в черный список',
+								{
+									elem: 'close',
+									tag: 'a',
+									content:
+										'Закрыть'
+								}
+							]
+						},
+						{
+							elem: 'content',
+							content: [
+								{
+									block: 'confirm-black-list',
+									content: [
+										{
+											elem: 'text',
+											content:
+												'Всех пользователей добавленных в черный список можно посмотреть на вкладке <a href="#">Настройки</a><br>' +
+												'Также можно настроить отключение данного уведомления'
+										},
+										{
+											elem: 'controls',
+											content: [
+												{
+													tag: 'a',
+													attrs: {'href': '#'},
+													content:
+														'Продолжить'
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					block: 'popup',
+					attrs: {'id': 'delete-user'},
+					content: [
+						{
+							elem: 'title',
+							content: [
+								'Удалить собеседника',
+								{
+									elem: 'close',
+									tag: 'a',
+									content:
+										'Закрыть'
+								}
+							]
+						},
+						{
+							elem: 'content',
+							content: [
+								{
+									block: 'delete-user',
+									content: [
+										{
+											block: 'delete-user-list',
+											tag: 'ul',
+											content: [
+												{
+													avatar: '1',
+													avatar_status: 'online',
+													name:
+													'Григорий<br>' +
+													'Суворов'
+												},
+												{
+													avatar: '2',
+													avatar_status: 'online',
+													name:
+													'Анна<br>' +
+													'Богданова'
+												},
+												{
+													avatar: '3',
+													avatar_status: 'offline',
+													name:
+													'Антон<br>' +
+													'Виноградов'
+												},
+												{
+													avatar: '2',
+													avatar_status: 'online',
+													name:
+													'Анна<br>' +
+													'Богданова'
+												},
+												{
+													avatar: '3',
+													avatar_status: 'offline',
+													name:
+													'Антон<br>' +
+													'Виноградов'
+												},
+												{
+													avatar: '1',
+													avatar_status: 'online',
+													name:
+													'Григорий<br>' +
+													'Суворов'
+												},
+												{
+													avatar: '1',
+													avatar_status: 'online',
+													name:
+													'Григорий<br>' +
+													'Суворов'
+												},
+												{
+													avatar: '2',
+													avatar_status: 'online',
+													name:
+													'Анна<br>' +
+													'Богданова'
+												},
+												{
+													avatar: '3',
+													avatar_status: 'offline',
+													name:
+													'Антон<br>' +
+													'Виноградов'
+												}
+											].map(function(item) {
+												return {
+													block: 'delete-user-list-item',
+													tag: 'li',
+													content: [
+														{
+															elem: 'avatar',
+															content: [
+																{
+																	block: 'template-avatar',
+																	avatar: item.avatar,
+																	size: 'big',
+																	status: item.avatar_status
+																}
+															]
+														},
+														{
+															elem: 'name',
+															content: [
+																{
+																	tag: 'a',
+																	attrs: {'href': '#'},
+																	content: item.name
+																}
+															]
+														}
+													]
+												};
+											})
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					block: 'popup',
+					attrs: {'id': 'photo-new'},
+					content: [
+						{
+							elem: 'title',
+							tag: 'h3',
+							content: [
+								'Новая фотография',
+								{
+									elem: 'close',
+									tag: 'a',
+									content:
+										'Закрыть'
+								}
+							]
+						},
+						{
+							elem: 'content',
+							content: [
+								{
+									block: 'media-upload',
+									content: [
+										{
+											elem: 'file',
+											tag: 'input',
+											attrs: {'type': 'file'}
+										},
+										{
+											elem: 'controls',
+											content: [
+												{
+													tag: 'a',
+													attrs: {'href': '#'},
+													content:
+														'Прикрепить'
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					block: 'popup',
+					attrs: {'id': 'video-new'},
+					content: [
+						{
+							elem: 'title',
+							tag: 'h3',
+							content: [
+								'Новое видео',
+								{
+									elem: 'close',
+									tag: 'a',
+									content:
+										'Закрыть'
+								}
+							]
+						},
+						{
+							elem: 'content',
+							content: [
+								{
+									block: 'media-upload',
+									content: [
+										{
+											elem: 'input',
+											tag: 'input',
+											attrs: {'type': 'text', 'placeholder': 'https://www.youtube.com/'}
+										},
+										{
+											elem: 'text',
+											content:
+												'Вы можете указать ссылку на страницу видеозаписи на таких сайтах, как Youtube, Rutube, Vimeo и другие.'
+										},
+										{
+											elem: 'controls',
+											content: [
+												{
+													tag: 'a',
+													attrs: {'href': '#'},
+													content:
+														'Прикрепить'
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					block: 'popup',
+					attrs: {'id': 'video-attach'},
+					content: [
+						{
+							elem: 'title',
+							tag: 'h3',
+							content: [
+								'Прикрепить видеозапись',
+								{
+									elem: 'close',
+									tag: 'a',
+									content:
+										'Закрыть'
+								}
+							]
+						},
+						{
+							elem: 'content',
+							content: [
+								{
+									block: 'video-attach',
+									content: [
+										{
+											block: 'last-videos-search',
+											content: [
+												{
+													elem: 'form',
+													content: [
+														{
+															elem: 'field',
+															content: [
+																{
+																	elem: 'input',
+																	tag: 'input',
+																	attrs: {'type': 'text', 'placeholder': 'Поиск по видеозаписям'}
+																}
+															]
+														},
+														{
+															elem: 'controls',
+															content: [
+																{
+																	elem: 'button',
+																	tag: 'button',
+																	attrs: {'type': 'submit'},
+																	content:
+																		'Найти'
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											block: 'video-albums',
+											content: [
+												{
+													block: 'video-albums-list',
+													tag: 'ul',
+													content: [
+														{
+															title:
+																'Название видеоальбома',
+															count:
+																'(7)',
+															photos: [
+																{
+																	block: 'video-albums-last-list',
+																	tag: 'ul',
+																	content: [
+																		{
+																			video: '1'
+																		},
+																		{
+																			video: '2'
+																		},
+																		{
+																			video: '3'
+																		},
+																		{
+																			video: '1'
+																		}
+																	].map(function(item) {
+																		return {
+																			block: 'video-albums-last-list-item',
+																			tag: 'li',
+																			content: [
+																				{
+																					tag: item.video ? 'a' : undefined,
+																					attrs: {'href': '#'},
+																					content: [
+																						{
+																							tag: item.video ? 'img' : undefined,
+																							attrs: {'src': 'img/photos/medium/' + item.video + '.jpg'}
+																						}
+																					]
+																				}
+																			]
+																		};
+																	})
+																}
+															]
+														},
+														{
+															title:
+																'Название видеоальбома',
+															count:
+																'(3)',
+															photos: [
+																{
+																	block: 'video-albums-last-list',
+																	tag: 'ul',
+																	content: [
+																		{
+																			video: '1'
+																		},
+																		{
+																			video: '2'
+																		},
+																		{
+																			video: '3'
+																		},
+																		{
+																			video: ''
+																		}
+																	].map(function(item) {
+																		return {
+																			block: 'video-albums-last-list-item',
+																			tag: 'li',
+																			content: [
+																				{
+																					tag: item.video ? 'a' : undefined,
+																					attrs: {'href': '#'},
+																					content: [
+																						{
+																							tag: item.video ? 'img' : undefined,
+																							attrs: {'src': 'img/photos/medium/' + item.video + '.jpg'}
+																						}
+																					]
+																				}
+																			]
+																		};
+																	})
+																}
+															]
+														},
+														{
+															title:
+																'Название видеоальбома',
+															count:
+																'(1)',
+															photos: [
+																{
+																	block: 'video-albums-last-list',
+																	tag: 'ul',
+																	content: [
+																		{
+																			video: '1'
+																		},
+																		{
+																			video: ''
+																		},
+																		{
+																			video: ''
+																		},
+																		{
+																			video: ''
+																		}
+																	].map(function(item) {
+																		return {
+																			block: 'video-albums-last-list-item',
+																			tag: 'li',
+																			content: [
+																				{
+																					tag: item.video ? 'a' : undefined,
+																					attrs: {'href': '#'},
+																					content: [
+																						{
+																							tag: item.video ? 'img' : undefined,
+																							attrs: {'src': 'img/photos/medium/' + item.video + '.jpg'}
+																						}
+																					]
+																				}
+																			]
+																		};
+																	})
+																}
+															]
+														},
+														{
+															title:
+																'Название видеоальбома',
+															count:
+																'(48)',
+															photos: [
+																{
+																	block: 'video-albums-last-list',
+																	tag: 'ul',
+																	content: [
+																		{
+																			video: '1'
+																		},
+																		{
+																			video: '2'
+																		},
+																		{
+																			video: '3'
+																		},
+																		{
+																			video: '1'
+																		}
+																	].map(function(item) {
+																		return {
+																			block: 'video-albums-last-list-item',
+																			tag: 'li',
+																			content: [
+																				{
+																					tag: item.video ? 'a' : undefined,
+																					attrs: {'href': '#'},
+																					content: [
+																						{
+																							tag: item.video ? 'img' : undefined,
+																							attrs: {'src': 'img/photos/medium/' + item.video + '.jpg'}
+																						}
+																					]
+																				}
+																			]
+																		};
+																	})
+																}
+															]
+														}
+													].map(function(item) {
+														return {
+															block: 'video-albums-list-item',
+															tag: 'li',
+															content: [
+																{
+																	elem: 'title',
+																	content: [
+																		{
+																			tag: 'a',
+																			attrs: {'href': '#'},
+																			content: [
+																				item.title,
+																				{
+																					elem: 'count',
+																					tag: 'span',
+																					content: item.count
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	elem: 'videos',
+																	content: item.photos
+																}
+															]
+														};
+													})
+												},
+												{
+													elem: 'show-all',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Показать все 11 видеоальбомов'
+														}
+													]
+												}
+											]
+										},
+										{
+											block: 'last-videos-list',
+											tag: 'ul',
+											content: [
+												{
+													video: '1',
+													title:
+														'NASA LIVE Video : Земля из космоса'
+												},
+												{
+													video: '2',
+													title:
+														'NASA LIVE Video : Земля из космоса'
+												},
+												{
+													video: '3',
+													title:
+														'NASA LIVE Video : Земля из космоса'
+												},
+												{
+													video: '1',
+													title:
+														'NASA LIVE Video : Земля из космоса'
+												},
+												{
+													video: '2',
+													title:
+														'NASA LIVE Video : Земля из космоса'
+												},
+												{
+													video: '3',
+													title:
+														'NASA LIVE Video : Земля из космоса'
+												},
+												{
+													video: '1',
+													title:
+														'NASA LIVE Video : Земля из космоса'
+												},
+												{
+													video: '2',
+													title:
+														'NASA LIVE Video : Земля из космоса'
+												},
+												{
+													video: '3',
+													title:
+														'NASA LIVE Video : Земля из космоса'
+												},
+												{
+													video: '1',
+													title:
+														'NASA LIVE Video : Земля из космоса'
+												},
+												{
+													video: '2',
+													title:
+														'NASA LIVE Video : Земля из космоса'
+												},
+												{
+													video: '3',
+													title:
+														'NASA LIVE Video : Земля из космоса'
+												}
+											].map(function(item) {
+												return {
+													block: 'last-videos-list-item',
+													tag: 'li',
+													content: [
+														{
+															elem: 'video',
+															content: [
+																{
+																	block: 'popup-open',
+																	tag: 'a',
+																	attrs: {'href': '#video'},
+																	content: [
+																		{
+																			tag: 'img',
+																			attrs: {'src': 'img/photos/big/' + item.video + '.jpg'}
+																		}
+																	]
+																}
+															]
+														},
+														{
+															elem: 'name',
+															content: [
+																{
+																	tag: 'a',
+																	attrs: {'href': '#'},
+																	content: item.title
+																}
+															]
+														},
+														{
+															elem: 'album',
+															content: [
+																{
+																	tag: 'a',
+																	attrs: {'href': '#'},
+																	content:
+																		'Видеоальбом 1'
+																}
+															]
+														}
+													]
+												};
+											})
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					block: 'popup',
+					attrs: {'id': 'photo-attach'},
+					content: [
+						{
+							elem: 'title',
+							tag: 'h3',
+							content: [
+								'Прикрепить фотографию',
+								{
+									elem: 'close',
+									tag: 'a',
+									content:
+										'Закрыть'
+								}
+							]
+						},
+						{
+							elem: 'content',
+							content: [
+								{
+									block: 'photo-attach',
+									content: [
+										{
+											block: 'photo-albums',
+											content: [
+												{
+													block: 'photo-albums-list',
+													tag: 'ul',
+													content: [
+														{
+															title:
+																'My photos',
+															count:
+																'(7)',
+															photo: '1'
+														},
+														{
+															title:
+																'My photos',
+															count:
+																'(457)',
+															photo: '1'
+														},
+														{
+															title:
+																'My photos',
+															count:
+																'(21)',
+															photo: '1'
+														},
+														{
+															title:
+																'My photos',
+															count:
+																'(7)',
+															photo: '1'
+														}
+													].map(function(item) {
+														return {
+															block: 'photo-albums-list-item',
+															tag: 'li',
+															content: [
+																{
+																	elem: 'title',
+																	content: [
+																		{
+																			tag: 'a',
+																			attrs: {'href': '#'},
+																			content: [
+																				item.title,
+																				{
+																					elem: 'count',
+																					tag: 'span',
+																					content: item.count
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	elem: 'image',
+																	content: [
+																		{
+																			tag: 'a',
+																			attrs: {'href': '#'},
+																			content: [
+																				{
+																					tag: 'img',
+																					attrs: {'src': 'img/photos/medium/' + item.photo + '.jpg'}
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														};
+													})
+												},
+												{
+													elem: 'show-all',
+													content: [
+														{
+															tag: 'a',
+															attrs: {'href': '#'},
+															content:
+																'Показать все 15 альбомов'
+														}
+													]
+												}
+											]
+										},
+										{
+											block: 'last-photos-list',
+											tag: 'ul',
+											content: [
+												{
+													photo: '1'
+												},
+												{
+													photo: '2'
+												},
+												{
+													photo: '3'
+												},
+												{
+													photo: '1'
+												},
+												{
+													photo: '2'
+												},
+												{
+													photo: '3'
+												},
+												{
+													photo: '1'
+												},
+												{
+													photo: '2'
+												},
+												{
+													photo: '3'
+												},
+												{
+													photo: '1'
+												},
+												{
+													photo: '2'
+												},
+												{
+													photo: '3'
+												},
+												{
+													photo: '1'
+												},
+												{
+													photo: '2'
+												},
+												{
+													photo: '3'
+												},
+												{
+													photo: '1'
+												},
+												{
+													photo: '2'
+												},
+												{
+													photo: '3'
+												},
+												{
+													photo: '1'
+												},
+												{
+													photo: '2'
+												},
+												{
+													photo: '3'
+												},
+												{
+													photo: '1'
+												},
+												{
+													photo: '2'
+												},
+												{
+													photo: '3'
+												},
+												{
+													photo: '1'
+												},
+												{
+													photo: '2'
+												},
+												{
+													photo: '3'
+												},
+												{
+													photo: '1'
+												}
+											].map(function(item) {
+												return {
+													block: 'last-photos-list-item',
+													tag: 'li',
+													content: [
+														{
+															block: 'popup-open',
+															tag: 'a',
+															attrs: {'href': '#photo'},
+															content: [
+																{
+																	tag: 'img',
+																	attrs: {'src': 'img/photos/medium/' + item.photo + '.jpg'}
+																}
+															]
+														}
+													]
+												};
+											})
 										}
 									]
 								}

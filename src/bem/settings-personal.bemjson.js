@@ -95,7 +95,7 @@
 							block: 'settings',
 							content: [
 								{
-									block: 'settings-personal',
+									elem: 'content',
 									content: [
 										{
 											elem: 'block',
@@ -310,6 +310,7 @@
 														{
 															elem: 'list-item',
 															tag: 'dd',
+															mods: {'type': 'no-margin'},
 															content: [
 																{
 																	elem: 'languages-list',
@@ -809,18 +810,18 @@
 															]
 														}
 													]
-												}
-											]
-										},
-										{
-											elem: 'controls',
-											content: [
+												},
 												{
-													elem: 'button',
-													tag: 'button',
-													attrs: {'type': 'submit'},
-													content:
-														'Сохранить'
+													elem: 'controls',
+													content: [
+														{
+															elem: 'button',
+															tag: 'button',
+															attrs: {'type': 'submit'},
+															content:
+																'Сохранить'
+														}
+													]
 												}
 											]
 										}
@@ -831,6 +832,9 @@
 					]
 				}
 			]
+		},
+		{
+			block: 'template-other'
 		}
 	]
 });
